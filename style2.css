@@ -1,0 +1,77 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/lac-clair-avec-le-reflet-d-un-immense-chateau-contre-le-ciel-nuageux-en-automne.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 100px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    border-bottom: 1px solid white;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 85px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    padding-top: 35px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.form input {
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    width: 400px;
+    font-size: 16px;
+}
+
+.form button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    
+    transition: all 0.3s;
+}
+
+.form button:hover {
+    background-color: rgb(255, 255, 255);
+    color:black
+}

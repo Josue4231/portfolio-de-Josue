@@ -1,6 +1,19 @@
+ body{
+            background-image:url("img/brandi-redd-aJTiW00qqtI-unsplash.jpg") ;
+            background-repeat:no-repeat ;
+            background-size: cover;
+            background-position:0 0 ;
+            overflow: scroll;
+        }
 
-
-
+.span {
+  font-size: 18px;       
+  font-weight: 600;        
+  color: #ffffff;           
+  margin-top: 8px;          
+  text-align: center;       
+  display: block;           
+}
 
 header {
     display: flex;
@@ -257,6 +270,155 @@ nav ul li a:hover {
 .bloc:hover {
   transform: translateY(-5px);
 }
+
+.resume-title {
+  font-size: 2rem;
+  color: #6a5af9;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+
+.resume-item {
+  background-color: #222;      
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+
+.resume-item h4 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+
+.resume-item h5 {
+  font-size: 1rem;
+  color: #96f1ed;
+  margin-bottom: 10px;
+}
+
+
+.resume-item p em {
+  font-style: italic;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+
+.resume-item ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.resume-item ul li {
+  margin-bottom: 5px;
+  color: #fff;
+  line-height: 1.4;
+}
+
+
+@media (max-width: 768px) {
+  .resume-title { font-size: 1.8rem; }
+  .resume-item h4 { font-size: 1.1rem; }
+  .resume-item h5 { font-size: 0.9rem; }
+}
+.imgs{
+    width: 300px;
+    height:150px ;
+    margin-top:10px;
+    float:center;
+    padding:20px 10px 10px 10px;
+    
+  }
+  #href{
+    text-decoration: none;
+    color:#ffffff;
+
+  }
+  #href:hover{
+   border-radius: 12px;
+  background: linear-gradient(135deg, #6a5af9, #96f1ed);
+  font-size: 16px;
+  padding: 12px 28px;
+  margin: 0 10px; 
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+  /* Titre */
+#Contact .Skill {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+
+.contact-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+
+#Contact .im {
+  width: 220px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+
+#contact .contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgb(0, 0, 0);
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Icônes */
+#contact .contact svg {
+  color: #ffffff;
+}
+
+/* Liens */
+#contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Hover effets */
+#contact .contact:hover {
+  background: #696969;
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+
+
+
+
 
 
 

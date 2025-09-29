@@ -1,0 +1,76 @@
+
+    body {
+        background: linear-gradient(140deg, #fafafa, rgb(219, 52, 52));
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px 100px 0 0;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        border-bottom: 1px solid white;
+    }
+
+    /* Couleurs du logo Google */
+    .google-link .g { color: blue; }
+    .google-link .a { color: red; }
+    .google-link .oe { color: yellow; }
+    .google-link .ga { color: blue; }
+    .google-link .l { color: green; }
+    .google-link .e { color: red; }
+
+    h1 {
+        text-align: center;
+        font-size: 85px;
+        color: rgb(255, 46, 46);
+        text-shadow: 0 0 5px rgba(253, 57, 57, 0.8);
+        padding-top: 35px;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .form input {
+        border-radius: 25px;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px 20px;
+        width: 400px;
+        font-size: 16px;
+    }
+
+    .form button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        border-radius: 25px;
+        border: none;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .form button:hover {
+        background-color: darkred;
+    }
