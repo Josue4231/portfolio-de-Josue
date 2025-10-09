@@ -6,9 +6,11 @@
     <title>Portfolio de Josue Kialengela</title>
     <link rel="icon" href="img/josue.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 
 </head>
 <body>
+
     <header>
         <h1>Josue Kialengela-Tazi</h1>
         <nav>
@@ -19,13 +21,35 @@
                 <li><a href="#Parcour">Mes Parcours</li>
                 <li><a href="#Projects">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
+                <li><a href="Futur.html">Bonus</a></li>
             </ul>
         </nav>
          
         
     </header>
+
+    <section>
+      <audio id="audio-bg-music" autoplay loop controls>
+    <source src="musique/The Stranger - Gus Dapperton (EAFC 24 SOUNDTRACK).mp3" type="audio/mpeg">
+  Ton navigateur ne supporte pas la balise audio.
+  </audio>
+<style>
+ 
+#audio-bg-music {
+  bottom: 20px;          
+  right: 20px;          
+  width: 150px;             
+  z-index: 1000; 
+  margin-right: 5px ; 
+  position: fixed;   
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;   
+}
+
+</style>
+    </section>
     <section class="hero">
-        <p id="p">Bonjour m'appelle</p>
+        <p id="p">Bonjour je suis </p>
         <h1>Josué Kialengela-Tazi</h1>
         <p id="p"> Apprentie Web Developpeur</p>
         
@@ -48,13 +72,13 @@
 Passionné par le développement web et mobile, j’aime concevoir des sites et applications intuitives, performantes et adaptées aux besoins réels des utilisateurs.
 <br>
 <br>
-Je maîtrise plusieurs langages de programmation, dont <strong>HTML, CSS, JavaScript, PHP, Python, Kotlin, SQL, Java</strong>. Curieux, rigoureux et déterminé, je suis toujours motivé à relever de nouveaux défis techniques et à apprendre de nouvelles technologies.
+Je maîtrise plusieurs langages de programmation, dont <strong>HTML, CSS, JavaScript, PHP, Python, Kotlin, SQL </strong>. Curieux, rigoureux et déterminé, je suis toujours motivé à relever de nouveaux défis techniques et à apprendre de nouvelles technologies.
 <br>
 <br>
 Actuellement, je suis à la recherche d’un <strong>Stage obligatoire non rémunéré</strong> dans le cadre de ma formation, d’une durée de <strong>8 semaines</strong>, prévu du <strong>5 janvier au 13 février 2026</strong> ou sinon d'une <strong>Alternance</strong> pour ma deuxieme année.
 <br>
 <br>
-Je prévois de poursuivre mes études en <strong>troisième année en alternance</strong> dans le développement <a href="https://anakine.io/fiches-metiers-tech/tout-savoir-sur-le-metier-de-developpeur-full-stack/"class="gras" target="_blank"><strong>full stack</strong></a> ou <a href="https://anakine.io/fiches-metiers-tech/tout-savoir-sur-le-metier-de-developpeur-front-end/"class="gras" target="_blank"><strong>front-end</strong></a>. Je suis donc également en <strong>recherche active d’une entreprise</strong> pour m’accompagner dans cette alternance à partir de la rentrée prochaine.
+Je prévois de poursuivre mes études en <strong>troisième année en alternance</strong> dans le développement web en <a href="https://anakine.io/fiches-metiers-tech/tout-savoir-sur-le-metier-de-developpeur-full-stack/"class="gras" target="_blank"><strong>full stack</strong></a> ou <a href="https://anakine.io/fiches-metiers-tech/tout-savoir-sur-le-metier-de-developpeur-front-end/"class="gras" target="_blank"><strong>front-end</strong></a>. Je suis donc également en <strong>recherche active d’une entreprise</strong> pour m’accompagner dans cette alternance à partir de la rentrée prochaine.
 <br>
 <br> </p>
 <br>
@@ -140,7 +164,7 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
 
 
 <section id="Parcour">
-    <h2 class="Skill">Parcour professionelle</h2>
+    <h2 class="Skill">Parcours professionnel</h2>
             <div class="resume-item">
               <h4>Stage Franprix</h4>
               <h5>10/2019 -11/2019 Present</h5>
@@ -225,6 +249,17 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
     </p>
    </div>
 
+   <div class="bloc"><a href="https://github.com/Josue4231/Projet-Eurocatears" id="href" target="_blank">Projet-Eurocatears</a>
+    <br>
+    
+    <img src="img/Eurocoaters.png" class="imgs">
+    <p>
+      Création d’une base de données complète sur les parcs et montagnes russes d’Europe (UML, SQL, MariaDB).
+    </p>
+  
+  
+  </div>
+
 
   
 </section>
@@ -234,8 +269,8 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
   <h2 class="Skill">Contact</h2>
 
   <div class="contact-container">
-    <!-- 
-    <img src="ton-image.png" alt="Contact Image" class="im"> Image à gauche oublie pas ton image  -->
+
+    <img src="img/moi1.png" alt="Contact Image" class="im"> 
 
     <!-- Infos à droite -->
     <div id="contact">
