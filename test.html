@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="Projects" class="experience">
+    <h2 class="Skill">Mes Projects</h2>
+    <!--
+  <div class="bloc"><a href="" id="href" target="_blank">Geoworld</a>
+    <br>
+    <p>Unbuntu (linux)</p>
+   
+    <img src="" class="imgs">
+    <p class="Geo">J'ai développé Geoworld,
+      une application web interactive qui permet d'explorer des cartes et découvrir des informations géographiques et historiques 
+      via une architecture PHP/SQL.</p>
+  </div> -->
+  <div class="bloc" ><a href="https://josue4231.github.io/portfolio-sio/" id="href" target="_black">Portfolio Boostrap </a>
+    <br>
+     <img src="img/portfolio.png" class="imgs">
+    <p class="Geo">J’ai créé ce portfolio statique dans le cadre de ma formation en BTS SIO. 
+      Il est basé sur Pelican, un générateur de sites statiques, 
+      et utilise Bootstrap 5 pour la mise en page. Ce projet me permet de présenter mes compétences, mes projets et mes expériences de manière professionnelle.</p>
+  </div>
+  
+  <div class="bloc"><a href="google.html" id="href" target="_blank">Barre de recherche</a>
+      <a href="barre.html"><img src="img/barre de recherche.png" class="imgs"></a>
+    <p>
+      J'ai conçu une barre de recherche connectée à <strong>Google et Youtube</strong> afin d'offrir une navigation rapide et intuitive vers les résultats web directement depuis l'interface du site.
+    </p>
+  </div>
+   <div class="bloc"><a href="https://github.com/Josue4231/film" id="href" target="_blank">Films TMDb </a>
+    <br>
+    
+     <img src="img/film.png" class="imgs" >
+    <p>
+      Application web permettant de rechercher des films, de consulter les films populaires et par genre, et de découvrir des artistes célèbres. Le projet utilise l’API TMDb pour récupérer les données en temps réel et propose une interface responsive avec affiches, titres, notes et descriptions.
+    </p>
+   </div>
+   <div class="bloc"><a href="https://github.com/Josue4231/-Recherche-Chanson-Vid-o-YouTube" id="href" target="_blank">Recherche Youtube</a>
+    <br>
+    
+     <img src="img/anime youtube.png" class="imgs" >
+    <p>
+      Application web permettant de rechercher des chansons ou artistes, avec des vidéos YouTube intégrées. Le projet offre une interface responsive et intuitive pour découvrir et écouter de la musique .
+    </p>
+   </div>
+
+   <div class="bloc"><a href="https://github.com/Josue4231/kotlin-Monsters" id="href" target="_blank">Kotlin Monster</a>
+    <br>
+    
+     <img src="img/kotlin123.png" class="imgs" >
+    <p>
+     Kotlin Monsters est un jeu d’aventure en Kotlin, inspiré de Pokémon. Le joueur incarne un dresseur chargé de capturer des monstres, combattre, les faire évoluer et collectionner des badges en explorant différentes zones.
+    </p>
+   </div>
+
+   <div class="bloc"><a href="https://github.com/Josue4231/Projet-Eurocatears" id="href" target="_blank">Projet-Eurocatears</a>
+    <br>
+    
+    <img src="img/Eurocoaters.png" class="imgs">
+    <p>
+      Création d’une base de données complète sur les parcs et montagnes russes d’Europe (UML, SQL, MariaDB).
+    </p>
+  
+  
+  </div>
+<style>
+    /* =========================
+   SECTION PROJECTS
+========================= */
+#Projects {
+  padding: 100px 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Titre */
+#Projects .Skill {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 70px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#Projects .Skill::after {
+  content: "";
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #00aaff, #6a00ff);
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 10px;
+}
+
+/* =========================
+   GRILLE DES PROJETS
+========================= */
+#Projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* =========================
+   CARTE PROJET
+========================= */
+.bloc {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* Hover carte */
+.bloc:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 25px 55px rgba(0, 153, 255, 0.6);
+}
+
+/* =========================
+   LIEN TITRE
+========================= */
+#href {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #00aaff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+#href:hover {
+  color: #6a00ff;
+}
+
+/* =========================
+   IMAGE PROJET
+========================= */
+.imgs {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 15px 0;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.bloc:hover .imgs {
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================
+   TEXTE DESCRIPTION
+========================= */
+.bloc p {
+  color: #eaeaea;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  #Projects .Skill {
+    font-size: 2.2rem;
+  }
+
+  .imgs {
+    height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  #Projects {
+    padding: 70px 10px;
+    gap: 25px;
+  }
+
+  .bloc {
+    padding: 20px;
+  }
+
+  #href {
+    font-size: 1.25rem;
+  }
+
+  .bloc p {
+    font-size: 0.9rem;
+  }
+}
+body{
+    background-color: #121212;
+}
+</style>
+
+  
+</section>
+</body>
+</html>
