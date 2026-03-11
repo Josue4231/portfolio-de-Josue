@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connexion</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f172a,#2563eb);
+}
+
+/* boîte du formulaire */
+
+.form-div{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:15px;
+width:320px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* titre */
+
+h1{
+text-align:center;
+margin-bottom:25px;
+color:white;
+font-size:24px;
+}
+
+/* labels */
+
+label{
+display:block;
+margin-top:15px;
+margin-bottom:5px;
+color:white;
+font-size:14px;
+}
+
+/* champs */
+
+input{
+width:100%;
+padding:10px;
+border:none;
+border-radius:8px;
+background:rgba(255,255,255,0.2);
+color:white;
+font-size:14px;
+}
+
+input::placeholder{
+color:#e2e8f0;
+}
+
+input:focus{
+outline:none;
+background:rgba(255,255,255,0.3);
+}
+
+/* bouton */
+
+button{
+width:100%;
+margin-top:25px;
+padding:12px;
+border:none;
+border-radius:8px;
+ background: linear-gradient(90deg, #3B82F6, #2563EB); 
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:linear-gradient(90deg, #3B82F6, #e2e8f0);
+transform:scale(1.03);
+}
+
+/* message erreur */
+
+#error{
+margin-top:15px;
+text-align:center;
+color:#ffffff;
+font-size:14px;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-div">
+
+<form id="loginForm">
+
+<h1>Connexion</h1>
+
+<label for="id">Identifiant</label>
+<input type="text" id="id" placeholder="Entrer votre identifiant" required>
+
+<label for="mdp">Mot de passe</label>
+<input type="password" id="mdp" placeholder="Entrer votre mot de passe" required>
+
+<button type="submit">Se connecter</button>
+
+<p id="error"></p>
+
+</form>
+
+</div>
+
+<script>
+
+document.getElementById("loginForm").addEventListener("submit", function(event){
+
+event.preventDefault();
+
+let id = document.getElementById("id").value;
+let mdp = document.getElementById("mdp").value;
+
+if(id === "jojoboss" && mdp === "Vubpoc74"){
+
+window.location.href="veille.html";
+
+}else{
+
+document.getElementById("error").textContent="Identifiant ou mot de passe incorrect";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
