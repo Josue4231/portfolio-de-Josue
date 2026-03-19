@@ -109,7 +109,11 @@ font family pour le corps  'Inter', sans-serif
 }
 
 
-
+/* Github Experience*/
+#github a{
+                text-decoration: none;
+                color: #F1F5F9;
+              }
 
 
 
@@ -479,6 +483,11 @@ h2.Skill {
   margin: 15px auto 0;
   border-radius: 10px;
 }
+/*Texte en bas image*/
+  #desc{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+  }
 
 /* =========================
    GRILLE DES PROJETS
@@ -584,8 +593,41 @@ h2.Skill {
     font-size: 1.2rem;
   }
 }
+/*=========
+SUITE DU BLOC LES FILTRE
+=====================*/
+.filters {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
+.filters a {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  color: #F1F5F9;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
+.filters a:hover {
+  background: #3B82F6;
+  .filters button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  color: #F1F5F9;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover {
+  background: #3B82F6;
+}
+}
 
 
 
@@ -805,8 +847,33 @@ input[type="radio"]{
     opacity:0.9;
 }
 
+/*Rapport de stage */
+  .rdt p a {
+  position: relative;
+  color: #F1F5F9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
 
+.rdt p a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #38BDF8;
+  transition: width 0.3s ease;
+}
 
+.rdt p a:hover {
+  color: #38BDF8;
+}
+
+.rdt p a:hover::after {
+  width: 100%;
+}
 
 
 

@@ -24,8 +24,8 @@
                 <li><a href="#Parcour">Parcours</a></li>
                 <li><a href="#Projects">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
-                <li><a href="futur.html" id="a-link">Mon avenir</a></li>
-                <li><a href="Connection.html" id="a-link">Veille technologique</a></li>
+                <li><a href="futur.html" id="a-link" target="_blank">Mon avenir</a></li>
+                <li><a href="Connection.html" id="a-link" target="_blank">Veille technologique</a></li>
             </ul>
         </nav>
          
@@ -248,7 +248,7 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
         <h3 class="titi">Mes Expériences</h3>
         <div>
           <h4>Stage deuxiéme année | Assistant E-commerce Création de Sites Web </h4>
-          <span><a href="">Ouéso Agency</a> |  01/2026 à 02/2026 | Noisy le Grand</span>
+          <span><a href="https://ouesoagency.com/">Ouéso Agency</a> |  01/2026 à 02/2026 | Noisy le Grand</span>
             <ul>
               <li>Intégration de contenus (textes, visuels, pages produits) sur sites PrestaShop, WordPress (Elementor), Wix et Shopify</li>
               <li>Mise en place de l’arborescence, des menus et des modules</li>
@@ -262,7 +262,15 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
             <p>Wordpress</p>
             <p>Excel</p>
             </section>
+            <div class="rdt">
+              <p>
+                <a href="#" target="_blank">
+                  Rapport de stage 
+                </a>
+              </p>
+            </div>
         </div>
+
 
         <div>
           <h4>Stage premiére année | Développeur Web</h4>
@@ -278,7 +286,19 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
               <p>Css</p>
               <p>Javascript</p>
               <p>Boostrap</p>
+              <p id="github">
+                <a href="https://github.com/Josue4231/MonCoiffeurEnLigne.com">
+                  Github 
+                </a>
+              </p>
             </section>
+            <div class="rdt">
+              <p>
+                <a href="#">
+                  Rapport de stage 
+                </a>
+              </p>
+            </div>
 
         </div>
 
@@ -305,14 +325,20 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
 </style>
       
 
+
 <section id="Projects" class="experience">
   <h2 class="Skill">Mes Projets</h2>
+  <div class="filters">
+  <button onclick="filterProjects('all')">Tous</button>
+  <button onclick="filterProjects('ecole')">École</button>
+  <button onclick="filterProjects('perso')">Personnel</button>
+</div>
 
   <!-- Projet 1 -->
-  <div class="bloc">
+  <div class="bloc ecole">
     <a href="https://github.com/Josue4231/portfolio-sio" class="project-link" target="_blank">Portfolio Bootstrap</a>
     <a href="portfolio-detail.html"><img src="img/portfolio.png" class="imgs" alt="Portfolio"></a>
-    <p>
+    <p id="desc">
       J’ai créé ce portfolio statique dans le cadre de ma formation en <strong>BTS SIO</strong>. 
       Il utilise <strong>Bootstrap 5</strong> pour la mise en page et Pelican pour la génération statique. 
       Le projet présente mes compétences, projets et expériences de manière professionnelle, et inclut une navigation fluide et responsive.
@@ -320,10 +346,10 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
   </div>
 
   <!-- Projet 2 -->
-  <div class="bloc">
+  <div class="bloc perso">
     <a href="https://github.com/Josue4231/film" class="project-link" target="_blank">Films TMDb</a>
     <a href="film-detail.html"><img src="img/film.png" class="imgs" alt="Films TMDb"></a>
-    <p>
+    <p id="desc"> 
       Application web pour rechercher et découvrir des films via l’API <strong>TMDb</strong>. 
       Fonctionnalités : affichage des films populaires, tri par genre, recherche d’artistes. 
       L’interface est responsive et dynamique, avec affichage des affiches, notes et résumés en temps réel.
@@ -331,10 +357,10 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
   </div>
 
   <!-- Projet 3 -->
-  <div class="bloc">
+  <div class="bloc perso">
     <a href="https://github.com/Josue4231/-Recherche-Chanson-Vid-o-YouTube" class="project-link" target="_blank">Recherche YouTube</a>
     <a href="youtube-detail.html"><img src="img/anime youtube.png" class="imgs" alt="Recherche Youtube"></a>
-    <p>
+    <p id="desc">
       Application web pour rechercher des chansons ou artistes, avec intégration de vidéos YouTube. 
       Interface intuitive et responsive pour écouter et découvrir facilement de la musique, 
       avec possibilité de créer des playlists temporaires directement dans le navigateur.
@@ -342,44 +368,73 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
   </div>
 
   <!-- Projet 4 -->
-  <div class="bloc">
+  <div class="bloc ecole">
     <a href="https://github.com/Josue4231/kotlin-Monsters" class="project-link" target="_blank">Kotlin Monster</a>
     <a href="kotlin-detail.html"><img src="img/kotlin123.png" class="imgs" alt="Kotlin Monster"></a>
-    <p>
+    <p id="desc">
       Kotlin Monsters est un jeu d’aventure en <strong>Kotlin</strong>, inspiré de Pokémon. 
       Le joueur capture des monstres, les fait évoluer, combat d’autres dresseurs et collectionne des badges en explorant différentes zones du jeu.
     </p>
   </div>
 
   <!-- Projet 5 -->
-  <div class="bloc">
+  <div class="bloc ecole">
     <a href="https://github.com/Josue4231/Projet-Eurocatears" class="project-link" target="_blank">Projet Eurocatears</a>
     <a href="eurocatears-detail.html"><img src="img/Eurocoaters.png" class="imgs" alt="Projet Eurocatears"></a>
-    <p>
+    <p id="desc">
       Projet de base de données sur les parcs et montagnes russes d’Europe. 
       Comprend la conception UML, création SQL et gestion via <strong>MariaDB</strong>. 
       Permet de suivre les statistiques des attractions et organiser les données par pays et type de manège.
     </p>
   </div>
+<!--Projet 6-->
+   <div class="bloc perso">
+    <a href="#" class="project-link" target="_blank">Google</a>
+    <a href="google.html" target="_blank"><img src="img/google.png" class="imgs" alt="Projet Google"></a>
+    <p id="desc">
+      Développement d’une reproduction du moteur de recherche <strong>Google</strong> en HTML et CSS. 
+  Ce projet met l’accent sur la précision du design, la simplicité de l’interface et l’ergonomie utilisateur. 
+  Il intègre une barre de recherche fonctionnelle connectée à Google, ainsi que des liens vers des services externes comme Gmail et YouTube. 
+  Ce travail m’a permis de renforcer mes compétences en intégration web et en reproduction d’interfaces modernes.
+    </p>
+  </div>
+
+  <!--Projet 7-->
+   <div class="bloc ecole">
+    <a href="https://github.com/Josue4231/Savon-api" class="project-link" target="_blank">Sav app</a>
+    <a href="#" target="_blank"><img src="img/sav app.png" class="imgs" alt="Projet Sav app"></a>
+    <p id="desc">
+     <p>
+  Conception d’une application front-end en <strong>Angular</strong>, pensée comme une base robuste pour le développement d’interfaces web modernes. 
+  Le projet met en avant une architecture modulaire, une gestion efficace des routes et une préparation à l’intégration d’API. 
+  Il démontre ma capacité à structurer un projet scalable et à développer des applications performantes. 
+  Cette réalisation m’a permis de consolider mes compétences en Angular et en développement d’applications web dynamiques.
+    </p>
+  </div>
+
+
+
+
 
 </section>
+
 
 <section id="Contact"> 
   <h2 class="Skill">Contact</h2>
 
   <div class="contact-container">
     <div class="contact">
-      <p>N'hésitez pas à me contacter</p>
+      <p id="desc">N'hésitez pas à me contacter</p>
 
       <form action="https://formspree.io/f/xgoneowl" method="POST">
 
-        <label for="name">Nom et prénom *</label>
+        <label for="name" id="desc">Nom et prénom *</label>
         <input type="text" name="name" id="name" placeholder="Nom et prénom *" minlength="3" maxlength="80" required>
 
-        <label for="email">Email *</label>
+        <label for="email" id="desc">Email *</label>
         <input type="email" name="email" id="email" placeholder="Saisissez votre email" maxlength="50" required>
 
-        <label for="message">Message *</label>
+        <label for="message" id="desc">Message *</label>
         <textarea name="message" id="message" rows="5" placeholder="Saisissez votre message"></textarea>
 
         <button type="submit">Envoyer</button>
@@ -395,31 +450,31 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
   <h2 class="Skill">Avis sur mon portfolio</h2>
 
   <fieldset class="review-box">
-    <legend>Informations</legend>
+    <legend id="desc">Informations</legend>
 
     <form class="review-form" action="https://formspree.io/f/xgoneowl" method="POST">
 
-      <p>Civilité :</p>
+      <p id="desc">Civilité :</p>
 
       <label>
-        <input type="radio" name="civilite" value="Monsieur"> Monsieur
+        <input type="radio" name="civilite" value="Monsieur" id="desc"> Monsieur
       </label>
 
       <label>
-        <input type="radio" name="civilite" value="Madame"> Madame
+        <input type="radio" name="civilite" value="Madame" id="desc"> Madame
       </label>
 
       <label>
-        <input type="radio" name="civilite" value="Autre"> Autre
+        <input type="radio" name="civilite" value="Autre" id="desc"> Autre
       </label>
 
-      <label for="review-firstname">Prénom</label>
+      <label for="review-firstname" id="desc">Prénom</label>
       <input type="text" id="review-firstname" name="prenom" placeholder="Votre prénom *">
 
-      <label for="review-lastname">Nom</label>
+      <label for="review-lastname" id="desc">Nom</label>
       <input type="text" id="review-lastname" name="nom" placeholder="Votre nom *">
 
-      <label for="status">Vous êtes :</label>
+      <label for="status" id="desc">Vous êtes :</label>
       <select id="status" name="statut">
         <option>Étudiant</option>
         <option>Développeur</option>
@@ -428,10 +483,10 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
         <option>Autre</option>
       </select>
 
-      <label for="company">Entreprise / École</label>
+      <label for="company" id="desc">Entreprise / École</label>
       <input type="text" id="company" name="entreprise" placeholder="Nom de votre entreprise ou école">
 
-      <label for="note">Note du portfolio :</label>
+      <label for="note" id="desc">Note du portfolio :</label>
       <select id="note" name="note">
         <option>⭐</option>
         <option>⭐⭐</option>
@@ -440,10 +495,10 @@ Je prévois de poursuivre mes études en <strong>troisième année en alternance
         <option>⭐⭐⭐⭐⭐</option>
       </select>
 
-      <label for="review-text">Votre avis</label>
+      <label for="review-text" id="desc">Votre avis</label>
       <textarea id="review-text" name="avis" rows="4" placeholder="Donnez votre avis sur mon portfolio"></textarea>
 
-      <button type="submit">Publier</button>
+      <button type="submit" id="desc">Publier</button>
 
     </form>
 
