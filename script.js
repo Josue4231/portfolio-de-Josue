@@ -18,3 +18,12 @@ function filterProjects(category) {
     });
   }
 }
+
+/*Body*/
+ScrollReveal().reveal('.bloc', { 
+  distance: '50px',
+  duration: 1000,
+  easing: 'ease-out',
+  origin: 'bottom',
+  interval: 200
+});
