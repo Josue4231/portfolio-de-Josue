@@ -34,5 +34,8 @@ Tous les projets utilisent des interfaces **responsive et intuitives**, adaptée
 - **LinkedIn** : [Mon profil](https://www.linkedin.com/in/josu%C3%A9-kialengela-tazi/)  
 - **GitHub** : [Mon profil](https://github.com/Josue4231)
 - **Github.oi**:https://josue4231.github.io/portfolio-de-Josue/
+  ## Portfolio final:
+  Voici mon portfolio final :
+- **Github.oi**:https://josue4231.github.io/Portfolio-JK/ 
 
 ---
