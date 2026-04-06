@@ -1,610 +1,541 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Josué Kialengela - Développement web, projets et objectifs professionnels.">
     <meta name="author" content="Josué Kialengela">
     <meta name="keywords" content="Portfolio, Développement web, Angular, HTML, CSS, Projets, Josué Kialengela">
-    <meta property="og:title" content="Portfolio - Josué Kialengela">
-    <meta property="og:description" content="Découvrez mes projets, compétences et objectifs professionnels.">
-    <meta property="og:image" content="img/josue.png">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>Portfolio de Josue Kialengela</title>
-    <link rel="icon" href="img/josue.png" type="image/x-icon">
+    <title>Josué Kialengela — Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  
 
-    <!-- HEADER Navigation -->
+    <!-- HEADER -->
     <header class="header">
-        <h1 id="h1p">Josue Kialengela-Tazi</h1>
+        <a href="index.html" class="logo">JK</a>
         <nav class="nav">
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="#About">A propos de moi </a></li>
+                <li><a href="#About">À propos</a></li>
                 <li><a href="#Skill-code">Compétences</a></li>
                 <li><a href="#Parcour">Parcours</a></li>
-                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Projects">Projets</a></li>
                 <li><a href="#Contact">Contact</a></li>
-                <li><a href="futur.html" id="a-link" target="_blank">Mon avenir</a></li>
-                <li><a href="Connection.html" id="a-link" target="_blank">Veille technologique</a></li>
+                <li><a href="futur.html" class="nav-cta" target="_blank">Mon avenir →</a></li>
+                <li><a href="Connection.html" class="nav-cta" target="_blank">Veille technologique →</a></li>
             </ul>
         </nav>
-         
-        
+        <button class="menu-toggle" id="menuToggle">☰</button>
     </header>
 
-
-  <!--Page principale -->
-   <section class="hero">
-  <div class="hero-text">
-    <h2>Hey</h2>
-    <h2>I am Josue</h2>
-    <h2>Student Full Stack Developer</h2>
-    <div class="hero-buttons">
-      <a href="https://www.linkedin.com/in/josu%C3%A9-kialengela-tazi/" class="social-media" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Josue4231" class="social-media" target="_blank">GitHub</a>
-    </div>
-  </div>
-  <img src="img/moi1.png" alt="Photo de Josue" class="hero-image">
-</section>
-
-    
-
-<!-- A propos de moi -->
- 
-<section id="About">
-    <h2 class="Skill">A propos</h2>
-<p>Je m’appelle <strong>Josue Kialengela-Tazi</strong>, étudiant en <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers"target="_blank" class="gras"><strong>2ᵉ Année de BTS SIO</strong>, </a>option <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers).
-<br>
-<br>
-Passionné par le développement web et mobile, j’aime concevoir des sites et applications intuitives, performantes et adaptées aux besoins réels des utilisateurs.
-<br>
-<br>
-Je maîtrise plusieurs langages de programmation, dont <strong>HTML, CSS, JavaScript, PHP, Python, Kotlin, SQL </strong>.  Je suis quelqu'un de curieux, rigoureux et déterminé, je suis toujours motivé à relever de nouveaux défis techniques et à apprendre de nouvelles technologies.
-<br>
-<br>
-Actuellement, je suis à la recherche d’une <strong>alternance en Bac+3</strong>, dans le développement web ou en UX/UI design, avec comme préférence pour le <strong>front-end</strong>. 
-<br>
-<br>
-Je prévois de poursuivre mes études en <strong>troisième année en alternance</strong> dans le développement web en <a href="https://anakine.io/fiches-metiers-tech/tout-savoir-sur-le-metier-de-developpeur-full-stack/"class="gras" target="_blank"><strong>Full stack</strong></a> ou <a href="https://anakine.io/fiches-metiers-tech/tout-savoir-sur-le-metier-de-developpeur-front-end/"class="gras" target="_blank"><strong>Front-end</strong></a>. Je suis donc également en <strong>recherche active d’une entreprise</strong> pour m’accompagner dans cette alternance à partir de la rentrée prochaine.
-<br>
-<br> </p>
-<br>
-<br>
-<div class="cv-buttons">
-  <a href="img/Alternance 3.0.pdf" class="cve" target="_blank">CV Alternance</a>
-  <a href="img/CL_2025-12-21_Josué_KIALENGELA-TAZI 2.pdf" class="cve" target="_blank">Lettre de motivation</a>
-</div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="Skill-code">
-  <h2 class="Skill">Langages & Frameworks</h2>
-  <div class="skills">
-    <!-- Langages -->
-    <div class="skill">
-      <h2 id="h2">Langages</h2>
-      <img src="img/html5_16183594.png" alt="HTML5">
-      <span class="span">HTML5</span>
-    </div>
-    <div class="skill">
-      <img src="img/css_919826.png" alt="CSS3">
-      <span class="span">CSS3</span>
-    </div>
-    <div class="skill">
-      <img src="img/js_5968292.png" alt="JavaScript">
-      <span class="span">JavaScript</span>
-    </div>
-    <div class="skill">
-      <img src="img/python_5968350.png" alt="Python">
-      <span class="span">Python</span>
-    </div>
-    <div class="skill">
-      <img src="img/programing_15484314.png" alt="PHP">
-      <span class="span">PHP</span>
-    </div>
-    <div class="skill">
-      <img src="img/KOt.png" alt="Kotlin">
-      <span class="span">Kotlin</span>
-    </div>
-    <!-- Frameworks -->
-    <div class="skill">
-      <h2>Frameworks / Librairies</h2>
-      <img src="img/Angular (2).png" alt="Angular">
-      <span class="span">Angular</span>
-    </div>
-    <div class="skill">
-      <img src="img/react-js-icon.png" alt="React.js">
-      <span class="span">React.js</span>
-    </div>
-    <div class="skill">
-      <img src="img/boostrap.png" alt="Bootstrap">
-      <span class="span">Bootstrap</span>
-    </div>
-  </div>
-</section>
-
-<section id="Skill-db">
-  <h2 class="Skill" id="h2">Bases de données</h2>
-  <div class="skills">
-    <div class="skill">
-      <img src="img/cfa2af18-ecdf-4ba8-b85b-c113fbe6176c.jpg" alt="SQL">
-      <span class="span">SQL</span>
-    </div>
-    <div class="skill">
-      <img src="img/mariadb-filled-.svg" alt="MariaDB">
-      <span class="span">MariaDB</span>
-    </div>
-    <div class="skill">
-      <img src="img/phpmyadmin.png" alt="PhpMyAdmin">
-      <span class="span">PhpMyAdmin</span>
-    </div>
-  </div>
-</section>
-
-<section id="Skill-tools">
-  <h2 class="Skill" id="h2">Outils & Applications</h2>
-  <div class="skills">
-    <div class="skill">
-      <img src="img/github.png" alt="Github">
-      <span class="span">GitHub</span>
-    </div>
-    <div class="skill">
-      <img src="img/vscode.png" alt="VSCode">
-      <span class="span">VS Code</span>
-    </div>
-    <div class="skill">
-      <img src="img/icons8-intellij-idea-48.png" alt="IntelliJ">
-      <span class="span">IntelliJ IDEA</span>
-    </div>
-    <div class="skill">
-      <img src="img/ubuntu.png" alt="Ubuntu">
-      <span class="span">Ubuntu</span>
-    </div>
-    <div class="skill">
-      <img src="img/figma.png" alt="Figma">
-      <span class="span">Figma</span>
-    </div>
-    <div class="skill">
-      <img src="img/worldpress.png" alt="WordPress">
-      <span class="span">WordPress</span>
-    </div>
-    <div class="skill">
-      <img src="img/trello.jpg" alt="Trello">
-      <span class="span">Trello</span>
-    </div>
-    <div class="skill">
-      <img src="img/prestashop.png" alt="PrestaShop">
-      <span class="span">PrestaShop</span>
-    </div>
-    <div class="skill">
-      <img src="img/spopify.png" alt="Shopify">
-      <span class="span">Shopify</span>
-    </div>
-  </div>
-</section>
-
-
-<section id="Parcour" style="color: white;">
-    <h2 class="tit">Education et Experience </h2>
-      <div class="ps">
-        <h3 >Mon Éducation</h3>
-          <div>
-            <h4>BTS SIO SLAM</h4>
-            <span>Lycée Leonard de Vinci-Melun | 2024-2026 | option SLAM | En cours
-            </span>
-            <p>
-                Le BTS Services Informatiques aux Organisations (SIO) est une formation orientée vers les métiers de l’informatique et du développement. 
-                Lors de la première année, j’ai étudié les bases communes aux deux spécialités : <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers) et 
-                <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux). Cette année m’a permis d’acquérir des connaissances en 
-                <strong>réseau, systèmes informatiques, développement web et bases de données</strong>.
-            </p>
-            <p>
-              En deuxième année, je me suis spécialisé dans l’option <strong>SLAM</strong>, qui est axée sur le développement d’applications. 
-              J’ai réalisé plusieurs <strong>projets de développement</strong> en utilisant différents langages et technologies comme 
-              <strong>HTML, CSS, JavaScript, PHP, SQL et Python</strong>. Ces projets m’ont permis de renforcer mes compétences en 
-              <strong>conception d’applications web, gestion de bases de données et développement logiciel</strong>.
-              </p>
-          </div>
-
-          <div>
-            <h4>Licence Science de Ingenieur</h4>
-            <span>Université Sorbonne Paris Nord-Villetaneuse | 2023-2024  </span>
-            
-
-            <p>
-              Première année de licence orientée vers les bases scientifiques et technologiques de l’ingénierie. 
-              Cette formation m’a permis de développer des compétences en <strong>mathématiques, informatique et logique scientifique</strong>, 
-              tout en découvrant différentes approches liées aux sciences de l’ingénieur.
-            </p>
-
-          </div>
-
-          <div>
-            <h4>Bac Génerale</h4>
-            <span>Lycée Henri Wallon-Aubervillier | 2020-2023 | spé : Mathématique Physique Chimie</span>
-            <p>
-              Baccalauréat général avec spécialités <strong>Mathématiques</strong> et <strong>Physique-Chimie</strong>. 
-              Cette formation m’a permis de développer des compétences en <strong>logique, analyse et résolution de problèmes</strong>, 
-              qui sont des bases importantes pour les études en informatique.
-            </p>
-          </div>
-
-      </div>
-
-
-      <div class="pp">
-        <h3 class="titi">Mes Expériences</h3>
-        <div>
-          <h4>Stage deuxiéme année | Assistant E-commerce Création de Sites Web </h4>
-          <span><a href="https://ouesoagency.com/">Ouéso Agency</a> |  01/2026 à 02/2026 | Noisy le Grand</span>
-            <ul>
-              <li>Intégration de contenus (textes, visuels, pages produits) sur sites PrestaShop, WordPress (Elementor), Wix et Shopify</li>
-              <li>Mise en place de l’arborescence, des menus et des modules</li>
-              <li>Personnalisation des templates et ajustements design</li>
-              <li>Tests des fonctionnalités et optimisation de l’expérience utilisateur</li>
-              <li>Participation aux échanges clients pour le suivi des projets</li>
-            </ul>
-            <section>
-            <p>Prestashop</p>
-            <p>Shopify</p>
-            <p>Wordpress</p>
-            <p>Excel</p>
-            </section>
-            <div class="rdt">
-              <p>
-                <a href="#" target="_blank">
-                  Rapport de stage 
-                </a>
-              </p>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">Disponible pour alternance Bac+3</div>
+            <h1 class="hero-title">
+                <span class="hero-line">Je suis</span>
+                <span class="hero-line hero-name">Josué<em> Kialengela</em></span>
+                <span class="hero-line">Full Stack Dev.</span>
+            </h1>
+            <p class="hero-sub">Étudiant BTS SIO SLAM · Passionné par le front-end, le design et les applications web modernes.</p>
+            <div class="hero-actions">
+                <a href="https://www.linkedin.com/in/josu%C3%A9-kialengela-tazi/" class="btn btn-outline" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Josue4231" class="btn btn-outline" target="_blank">GitHub</a>
+                <a href="#Contact" class="btn btn-solid">Me contacter</a>
             </div>
         </div>
-
-
-        <div>
-          <h4>Stage premiére année | Développeur Web</h4>
-          <span><a href="">Barber Shop Norvegien 007</a> | 05/2025 à 06/2025</span>
-            <ul>
-              <li>Création d’un site vitrine responsive (HTML, CSS, JavaScript)</li>
-              <li>Intégration d’un formulaire de contact, d’une galerie photo et de tarifs dynamiques</li>
-              <li>Mise en ligne du site via GitHub Pages</li>
-            </ul>
-
-            <section>
-              <p>HTML</p>
-              <p>Css</p>
-              <p>Javascript</p>
-              <p>Boostrap</p>
-              <p id="github">
-                <a href="https://github.com/Josue4231/MonCoiffeurEnLigne.com">
-                  Github 
-                </a>
-              </p>
-            </section>
-            <div class="rdt">
-              <p>
-                <a href="#">
-                  Rapport de stage 
-                </a>
-              </p>
+        <div class="hero-visual">
+            <div class="hero-img-wrap">
+                <img src="img/Portrait professionnel souriant en entreprise.png" alt="Photo de Josué">
+                <div class="hero-img-badge">BTS SIO SLAM</div>
             </div>
-
         </div>
-
-        <div>
-          <h4>Stage scolaire | Assistant de gestion de rayon</h4>
-          <span>Franprix | 10/2021 à 11/2021</span>
-            <ul>
-              <li>Mise en rayon et valorisation des produits</li>
-              <li>Gestion des stocks et réalisation d’inventaires</li>
-              <li>Accueil, information et conseil à la clientèle</li>
-            </ul>
-
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
-
-
-
-      </div>
-         
-      
-</section>
-
-<style>
-
-</style>
-      
-
-
-<section id="Projects" class="experience">
-  <h2 class="Skill">Mes Projets</h2>
-  <div class="filters">
-  <button onclick="filterProjects('all')">Tous</button>
-  <button onclick="filterProjects('ecole')">École</button>
-  <button onclick="filterProjects('perso')">Personnel</button>
-</div>
-
-  <!-- Projet 1 -->
-  <div class="bloc ecole">
-    <a href="https://github.com/Josue4231/portfolio-sio" class="project-link" target="_blank">Portfolio Bootstrap</a>
-    <a href="portfolio-detail.html"><img src="img/portfolio.png" class="imgs" alt="Portfolio"></a>
-    <p id="desc">
-      J’ai créé ce portfolio statique dans le cadre de ma formation en <strong>BTS SIO</strong>. 
-      Il utilise <strong>Bootstrap 5</strong> pour la mise en page et Pelican pour la génération statique. 
-      Le projet présente mes compétences, projets et expériences de manière professionnelle, et inclut une navigation fluide et responsive.
-    </p>
-  </div>
-
-  <!-- Projet 2 -->
-  <div class="bloc perso">
-    <a href="https://github.com/Josue4231/film" class="project-link" target="_blank">Films TMDb</a>
-    <a href="film-detail.html"><img src="img/film.png" class="imgs" alt="Films TMDb"></a>
-    <p id="desc"> 
-      Application web pour rechercher et découvrir des films via l’API <strong>TMDb</strong>. 
-      Fonctionnalités : affichage des films populaires, tri par genre, recherche d’artistes. 
-      L’interface est responsive et dynamique, avec affichage des affiches, notes et résumés en temps réel.
-    </p>
-  </div>
-
-  <!-- Projet 3 -->
-  <div class="bloc perso">
-    <a href="https://github.com/Josue4231/-Recherche-Chanson-Vid-o-YouTube" class="project-link" target="_blank">Recherche YouTube</a>
-    <a href="youtube-detail.html"><img src="img/anime youtube.png" class="imgs" alt="Recherche Youtube"></a>
-    <p id="desc">
-      Application web pour rechercher des chansons ou artistes, avec intégration de vidéos YouTube. 
-      Interface intuitive et responsive pour écouter et découvrir facilement de la musique, 
-      avec possibilité de créer des playlists temporaires directement dans le navigateur.
-    </p>
-  </div>
-
-  <!-- Projet 4 -->
-  <div class="bloc ecole">
-    <a href="https://github.com/Josue4231/kotlin-Monsters" class="project-link" target="_blank">Kotlin Monster</a>
-    <a href="kotlin-detail.html"><img src="img/kotlin123.png" class="imgs" alt="Kotlin Monster"></a>
-    <p id="desc">
-      Kotlin Monsters est un jeu d’aventure en <strong>Kotlin</strong>, inspiré de Pokémon. 
-      Le joueur capture des monstres, les fait évoluer, combat d’autres dresseurs et collectionne des badges en explorant différentes zones du jeu.
-    </p>
-  </div>
-
-  <!-- Projet 5 -->
-  <div class="bloc ecole">
-    <a href="https://github.com/Josue4231/Projet-Eurocatears" class="project-link" target="_blank">Projet Eurocatears</a>
-    <a href="eurocatears-detail.html"><img src="img/Eurocoaters.png" class="imgs" alt="Projet Eurocatears"></a>
-    <p id="desc">
-      Projet de base de données sur les parcs et montagnes russes d’Europe. 
-      Comprend la conception UML, création SQL et gestion via <strong>MariaDB</strong>. 
-      Permet de suivre les statistiques des attractions et organiser les données par pays et type de manège.
-    </p>
-  </div>
-<!--Projet 6-->
-   <div class="bloc perso">
-    <a href="#" class="project-link" target="_blank">Google</a>
-    <a href="google.html" target="_blank"><img src="img/google.png" class="imgs" alt="Projet Google"></a>
-    <p id="desc">
-      Développement d’une reproduction du moteur de recherche <strong>Google</strong> en HTML et CSS. 
-  Ce projet met l’accent sur la précision du design, la simplicité de l’interface et l’ergonomie utilisateur. 
-  Il intègre une barre de recherche fonctionnelle connectée à Google, ainsi que des liens vers des services externes comme Gmail et YouTube. 
-  Ce travail m’a permis de renforcer mes compétences en intégration web et en reproduction d’interfaces modernes.
-    </p>
-  </div>
-
-  <!--Projet 7-->
-   <div class="bloc ecole">
-    <a href="https://github.com/Josue4231/Savon-api" class="project-link" target="_blank">Sav app</a>
-    <a href="#" target="_blank"><img src="img/sav app.png" class="imgs" alt="Projet Sav app"></a>
-    <p id="desc">
-     <p>
-  Conception d’une application front-end en <strong>Angular</strong>, pensée comme une base robuste pour le développement d’interfaces web modernes. 
-  Le projet met en avant une architecture modulaire, une gestion efficace des routes et une préparation à l’intégration d’API. 
-  Il démontre ma capacité à structurer un projet scalable et à développer des applications performantes. 
-  Cette réalisation m’a permis de consolider mes compétences en Angular et en développement d’applications web dynamiques.
-    </p>
-  </div>
-
-  <!--Projet 8-->
-   <div class="bloc ecole">
-    <a href="https://github.com/Josue4231/projet-web-commerce-Jojgame-" class="project-link" target="_blank">Jogame</a>
-    <a href="#" target="_blank"><img src="img/Jogame.png" class="imgs" alt="Projet E-commerce"></a>
-    <p id="desc">
-    <p>
-      Conception d’un site e-commerce front-end en <strong>HTML, CSS et JavaScript</strong>, nommé JojGame et dédié à la vente de jeux vidéo. 
-  Le projet met en avant une interface utilisateur claire et intuitive, avec une navigation fluide et un affichage dynamique des produits. 
-  Il intègre des fonctionnalités essentielles telles que la gestion d’un panier et un design responsive adapté à tous les écrans. 
-  Cette réalisation démontre ma capacité à structurer une application web interactive et à créer une expérience utilisateur cohérente. 
-  Elle m’a permis de renforcer mes compétences en développement front-end et en manipulation du DOM.
-    </p>
-    </p>
-  </div>
-  <!--Projet 9-->
-   <div class="bloc perso">
-    <a href="https://github.com/Josue4231/Projet-API-Movie-DB" class="project-link" target="_blank">Movie db</a>
-    <a href="#" target="_blank"><img src="img/Movied.png" class="imgs" alt=" Projet-API-Movie-DB"></a>
-    <p id="desc">
-    <p>
-  Conception d’une application web front-end et back-end en <strong>PHP, HTML, CSS et Bootstrap</strong>, nommée Projet-API-Movie-DB, dédiée à la consultation et à la recherche de films via l’API The Movie Database (TMDb).  
-  Le projet met en avant une interface utilisateur intuitive et responsive, avec un affichage dynamique des films les plus populaires et les mieux notés.  
-  Il intègre des fonctionnalités essentielles telles que la recherche par titre, genre ou acteur, et le traitement des données JSON provenant de l’API.  
-  Cette réalisation démontre ma capacité à intégrer des services externes, à structurer une application web complète et à créer une expérience utilisateur cohérente.  
-  Elle m’a permis de renforcer mes compétences en PHP côté serveur, en manipulation de données API et en développement front-end responsive.
-  </p>
-    </p>
-  </div>
-
-
-
-
-
-</section>
-
-
-<section id="Contact"> 
-  <h2 class="Skill">Contact</h2>
-
-  <div class="contact-container">
-    <div class="contact">
-      <p id="desc">N'hésitez pas à me contacter</p>
-
-      <form action="https://formspree.io/f/xgoneowl" method="POST">
-
-        <label for="name" id="desc">Nom et prénom *</label>
-        <input type="text" name="name" id="name" placeholder="Nom et prénom *" minlength="3" maxlength="80" required>
-
-        <label for="email" id="desc">Email *</label>
-        <input type="email" name="email" id="email" placeholder="Saisissez votre email" maxlength="50" required>
-
-        <label for="message" id="desc">Message *</label>
-        <textarea name="message" id="message" rows="5" placeholder="Saisissez votre message"></textarea>
-
-        <button type="submit">Envoyer</button>
-
-      </form>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="avis">
-  <h2 class="Skill">Avis sur mon portfolio</h2>
-
-  <fieldset class="review-box">
-    <legend id="desc">Informations</legend>
-
-    <form class="review-form" action="https://formspree.io/f/xgoneowl" method="POST">
-
-      <p id="desc">Civilité :</p>
-
-      <label>
-        <input type="radio" name="civilite" value="Monsieur" id="desc"> Monsieur
-      </label>
-
-      <label>
-        <input type="radio" name="civilite" value="Madame" id="desc"> Madame
-      </label>
-
-      <label>
-        <input type="radio" name="civilite" value="Autre" id="desc"> Autre
-      </label>
-
-      <label for="review-firstname" id="desc">Prénom</label>
-      <input type="text" id="review-firstname" name="prenom" placeholder="Votre prénom *">
-
-      <label for="review-lastname" id="desc">Nom</label>
-      <input type="text" id="review-lastname" name="nom" placeholder="Votre nom *">
-
-      <label for="status" id="desc">Vous êtes :</label>
-      <select id="status" name="statut">
-        <option>Étudiant</option>
-        <option>Développeur</option>
-        <option>Recruteur</option>
-        <option>Employé</option>
-        <option>Autre</option>
-      </select>
-
-      <label for="company" id="desc">Entreprise / École</label>
-      <input type="text" id="company" name="entreprise" placeholder="Nom de votre entreprise ou école">
-
-      <label for="note" id="desc">Note du portfolio :</label>
-      <select id="note" name="note">
-        <option>⭐</option>
-        <option>⭐⭐</option>
-        <option>⭐⭐⭐</option>
-        <option>⭐⭐⭐⭐</option>
-        <option>⭐⭐⭐⭐⭐</option>
-      </select>
-
-      <label for="review-text" id="desc">Votre avis</label>
-      <textarea id="review-text" name="avis" rows="4" placeholder="Donnez votre avis sur mon portfolio"></textarea>
-
-      <button type="submit" id="desc">Publier</button>
-
-    </form>
-
-  </fieldset>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-<style>
-
-</style>
-
-
-
-
-
-<!--Section musique-->
-<section id="musique">
-    <h1 class="Skill">Music</h1>
-  <div class="mis">
-    <div>
-    
-      <img src="img/all in you.jpg" class="img-music">
-      <h3 class="title-music">All in You</h3>
-      <span class="sp">Whois Taino</span>
-      <a href="https://www.youtube.com/watch?v=RU76WwYkATw" id="">Play</a>
-    </div>
-
-    <div>
-      <img src="img/shiawase.jpg" class="img-music">
-      <h3 class="title-music"> Shiawase </h3>
-      <span class="sp">Dion Timmer</span>
-      <a href="https://www.youtube.com/watch?v=N-V3zqvtbCM" id="">Play</a>
-    </div>
-
-    <div>
-      <img src="img/consume.jpg" class="img-music">
-      <h3 class="title-music">Consume</h3>
-      <span class="sp">Bearky</span>
-      <a href="https://www.youtube.com/watch?v=OQKN1Aqe69k" id="">Play</a>
-    </div>
-
-    <div>
-      <img src="img/blackclover.jpg" class="img-music">
-      <h3 class="title-music">Black clover</h3>
-      <span class="sp">Black clover op3</span>
-      <a href="https://www.youtube.com/watch?v=dUiDZJMPh-s" id="">Play</a>
-    </div>
-
-    <div>
-      <img src="img/bad liar.jpg" class="img-music">
-      <h3 class="title-music">Bad liar</h3>
-      <span class="sp">Imagine Dragon</span>
-      <a href="https://www.youtube.com/watch?v=I-QfPUz1es8" id="">Play</a>
-    </div>
-  </div>
-</section>
-
-  
-
+    </section>
+
+    <!-- ABOUT -->
+    <section id="About">
+        <div class="container">
+            <div class="section-label">01 — À propos</div>
+            <div class="about-grid">
+                <div class="about-heading">
+                    <h2>Construire des <em>expériences</em> qui ont du sens.</h2>
+                </div>
+                <div class="about-body">
+                    <p>Je m'appelle <strong>Josué Kialengela-Tazi</strong>, étudiant en <strong>2ᵉ année de BTS SIO</strong>, option <strong>SLAM</strong>. Passionné par le développement web et mobile, j'aime concevoir des interfaces intuitives et performantes.</p>
+                    <p>Je maîtrise <strong>HTML, CSS, JavaScript, PHP, Python, Kotlin, SQL</strong> et je suis toujours motivé à relever de nouveaux défis techniques.</p>
+                    <p>Actuellement à la recherche d'une <strong>alternance en Bac+3</strong>, avec une préférence pour le <strong>front-end</strong> et l'UX/UI design.</p>
+                    <div class="about-actions">
+                        <a href="img/Alternance 3.0.pdf" class="btn btn-solid" target="_blank">CV Alternance</a>
+                        <a href="img/CL_2025-12-21_Josué_KIALENGELA-TAZI 2.pdf" class="btn btn-outline" target="_blank">Lettre de motivation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="Skill-code">
+        <div class="container">
+            <div class="section-label">02 — Compétences</div>
+            <h2 class="section-title">Langages & Frameworks</h2>
+            <div class="skills-category">
+                <h3 class="skills-cat-title">Langages</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="img/html5_16183594.png" alt="HTML5"><span>HTML5</span></div>
+                    <div class="skill-card"><img src="img/css_919826.png" alt="CSS3"><span>CSS3</span></div>
+                    <div class="skill-card"><img src="img/js_5968292.png" alt="JavaScript"><span>JavaScript</span></div>
+                    <div class="skill-card"><img src="img/python_5968350.png" alt="Python"><span>Python</span></div>
+                    <div class="skill-card"><img src="img/programing_15484314.png" alt="PHP"><span>PHP</span></div>
+                    <div class="skill-card"><img src="img/KOt.png" alt="Kotlin"><span>Kotlin</span></div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3 class="skills-cat-title">Frameworks / Librairies</h3>
+                <div class="skills-grid">
+                    <div class="skill-card"><img src="img/Angular (2).png" alt="Angular"><span>Angular</span></div>
+                    <div class="skill-card"><img src="img/react-js-icon.png" alt="React.js"><span>React.js</span></div>
+                    <div class="skill-card"><img src="img/boostrap.png" alt="Bootstrap"><span>Bootstrap</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Skill-db">
+        <div class="container">
+            <h2 class="section-title">Bases de données</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><img src="img/cfa2af18-ecdf-4ba8-b85b-c113fbe6176c.jpg" alt="SQL"><span>SQL</span></div>
+                <div class="skill-card"><img src="img/mariadb-filled-.svg" alt="MariaDB"><span>MariaDB</span></div>
+                <div class="skill-card"><img src="img/phpmyadmin.png" alt="PhpMyAdmin"><span>PhpMyAdmin</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Skill-tools">
+        <div class="container">
+            <h2 class="section-title">Outils & Applications</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><img src="img/github.png" alt="Github"><span>GitHub</span></div>
+                <div class="skill-card"><img src="img/vscode.png" alt="VSCode"><span>VS Code</span></div>
+                <div class="skill-card"><img src="img/icons8-intellij-idea-48.png" alt="IntelliJ"><span>IntelliJ</span></div>
+                <div class="skill-card"><img src="img/ubuntu.png" alt="Ubuntu"><span>Ubuntu</span></div>
+                <div class="skill-card"><img src="img/figma.png" alt="Figma"><span>Figma</span></div>
+                <div class="skill-card"><img src="img/worldpress.png" alt="WordPress"><span>WordPress</span></div>
+                <div class="skill-card"><img src="img/trello.jpg" alt="Trello"><span>Trello</span></div>
+                <div class="skill-card"><img src="img/prestashop.png" alt="PrestaShop"><span>PrestaShop</span></div>
+                <div class="skill-card"><img src="img/spopify.png" alt="Shopify"><span>Shopify</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="Parcour">
+        <div class="container">
+            <div class="section-label">03 — Parcours</div>
+            <h2 class="section-title">Éducation & Expériences</h2>
+            <div class="timeline-grid">
+
+                <!-- EDUCATION -->
+                <div class="timeline-col">
+                    <h3 class="timeline-col-title">🎓 Éducation</h3>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2024 – 2026</span>
+                            <h4>BTS SIO SLAM</h4>
+                            <p class="timeline-org">Lycée Leonard de Vinci — Melun</p>
+                            <p>Formation orientée développement d'applications. Projets en <strong>HTML, CSS, JavaScript, PHP, SQL, Python</strong>. Spécialisation gestion BDD et applications web.</p>
+                            <div class="tags"><span>SLAM</span><span>En cours</span></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 – 2024</span>
+                            <h4>Licence Sciences de l'Ingénieur</h4>
+                            <p class="timeline-org">Université Sorbonne Paris Nord — Villetaneuse</p>
+                            <p>Bases scientifiques et technologiques : <strong>mathématiques, informatique et logique scientifique</strong>.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2020 – 2023</span>
+                            <h4>Baccalauréat Général</h4>
+                            <p class="timeline-org">Lycée Henri Wallon — Aubervilliers</p>
+                            <p>Spécialités <strong>Mathématiques & Physique-Chimie</strong>. Compétences en logique et résolution de problèmes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE -->
+                <div class="timeline-col">
+                    <h3 class="timeline-col-title">💼 Expériences</h3>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Jan – Fév 2026</span>
+                            <h4>Assistant E-commerce — Création de Sites Web</h4>
+                            <p class="timeline-org"><a href="https://ouesoagency.com/" target="_blank">Ouéso Agency</a> — Noisy-le-Grand</p>
+                            <ul>
+                                <li>Intégration de contenus sur PrestaShop, WordPress, Wix et Shopify</li>
+                                <li>Personnalisation templates et ajustements design</li>
+                                <li>Tests fonctionnels et optimisation UX</li>
+                            </ul>
+                            <div class="tags"><span>PrestaShop</span><span>Shopify</span><span>WordPress</span><span>Excel</span></div>
+                            <a href="stage.html" class="timeline-link">Rapport de stage →</a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Mai – Juin 2025</span>
+                            <h4>Développeur Web</h4>
+                            <p class="timeline-org">Barber Shop Norvegien 007</p>
+                            <ul>
+                                <li>Création d'un site vitrine responsive (HTML, CSS, JS)</li>
+                                <li>Formulaire de contact, galerie photo, tarifs dynamiques</li>
+                                <li>Mise en ligne via GitHub Pages</li>
+                            </ul>
+                            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div>
+                            <div class="timeline-links">
+                                <a href="https://github.com/Josue4231/MonCoiffeurEnLigne.com" class="timeline-link" target="_blank">GitHub →</a>
+                                <a href="#" class="timeline-link">Rapport de stage →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Oct – Nov 2021</span>
+                            <h4>Assistant de gestion de rayon</h4>
+                            <p class="timeline-org">Franprix</p>
+                            <ul>
+                                <li>Mise en rayon et gestion des stocks</li>
+                                <li>Accueil et conseil clientèle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="Projects">
+        <div class="container">
+            <div class="section-label">04 — Projets</div>
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterProjects('all', this)">Tous</button>
+                <button class="filter-btn" onclick="filterProjects('ecole', this)">École</button>
+                <button class="filter-btn" onclick="filterProjects('perso', this)">Personnel</button>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card ecole" data-cat="ecole">
+                    <div class="project-img-wrap">
+                        <a href="portfolio-detail.html"><img src="img/portfolio.png" alt="Portfolio Bootstrap"></a>
+                        <span class="project-tag">École</span>
+                    </div>
+                    <div class="project-info">
+                        <a href="https://github.com/Josue4231/portfolio-sio" class="project-title" target="_blank">Portfolio Bootstrap</a>
+                        <p>Portfolio statique en <strong>Bootstrap 5</strong> avec Pelican. Navigation fluide et responsive, présentation de compétences et projets.</p>
+                        <div class="project-tags"><span>Bootstrap</span><span>HTML</span><span>CSS</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card perso" data-cat="perso">
+                    <div class="project-img-wrap">
+                        <a href="film-detail.html"><img src="img/film.png" alt="Films TMDb"></a>
+                        <span class="project-tag">Personnel</span>
+                    </div>
+                    <div class="project-info">
+                        <a href="https://github.com/Josue4231/film" class="project-title" target="_blank">Films TMDb</a>
+                        <p>Application de recherche de films via l'API <strong>TMDb</strong>. Tri par genre, affiches, notes et résumés en temps réel.</p>
+                        <div class="project-tags"><span>JavaScript</span><span>API</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card perso" data-cat="perso">
+                    <div class="project-img-wrap">
+                        <a href="#"><img src="img/anime youtube.png" alt="Recherche YouTube"></a>
+                        <span class="project-tag">Personnel</span>
+                    </div>
+                    <div class="project-info">
+                        <a href="https://github.com/Josue4231/-Recherche-Chanson-Vid-o-YouTube" class="project-title" target="_blank">Recherche YouTube</a>
+                        <p>Application de recherche musicale avec intégration YouTube et création de playlists temporaires.</p>
+                        <div class="project-tags"><span>JavaScript</span><span>YouTube API</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card ecole" data-cat="ecole">
+                    <div class="project-img-wrap">
+                        <a href="kotlin-detail.html"><img src="img/kotlin123.png" alt="Kotlin Monster"></a>
+                        <span class="project-tag">École</span>
+                    </div>
+                    <div class="project-info">
+                        <a href="https://github.com/Josue4231/kotlin-Monsters" class="project-title" target="_blank">Kotlin Monster</a>
+                        <p>Jeu d'aventure inspiré de Pokémon en <strong>Kotlin</strong> : capture, évolution, combats et exploration de zones.</p>
+                        <div class="project-tags"><span>Kotlin</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card ecole" data-cat="ecole">
+                    <div class="project-img-wrap">
+                        <a href="eurocatears-detail.html"><img src="img/Eurocoaters.png" alt="Eurocatears"></a>
+                        <span class="project-tag">École</span>
+                    </div>
+                    <div class="project-info">
+                        <a href="https://github.com/Josue4231/Projet-Eurocatears" class="project-title" target="_blank">Projet Eurocatears</a>
+                        <p>Base de données sur les parcs et montagnes russes d'Europe. UML, SQL, <strong>MariaDB</strong>.</p>
+                        <div class="project-tags"><span>SQL</span><span>MariaDB</span><span>UML</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card perso" data-cat="perso">
+                    <div class="project-img-wrap">
+                        <a href="google.html" target="_blank"><img src="img/google.png" alt="Google Clone"></a>
+                        <span class="project-tag">Personnel</span>
+                    </div>
+                    <div class="project-info">
+                        <a href="#" class="project-title">Google Clone</a>
+                        <p>Reproduction fidèle du moteur de recherche Google en <strong>HTML et CSS</strong> avec barre fonctionnelle.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card ecole" data-cat="ecole">
+                    <div class="project-img-wrap">
+                        <a href="sav-detail.html"><img src="img/sav app.png" alt="Sav App"></a>
+                        <span class="project-tag">École</span>
+                    </div>
+                    <div class="project-info">
+                        <a href="https://github.com/Josue4231/Savon-api" class="project-title" target="_blank">SAV App — Angular</a>
+                        <p>Application front-end en <strong>Angular</strong> : architecture modulaire, gestion des routes, préparation API.</p>
+                        <div class="project-tags"><span>Angular</span><span>TypeScript</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card ecole" data-cat="ecole">
+                    <div class="project-img-wrap">
+                        <a href="jojgame-detail.html"><img src="img/Jogame.png" alt="JojGame"></a>
+                        <span class="project-tag">École</span>
+                    </div>
+                    <div class="project-info">
+                        <a href="https://github.com/Josue4231/projet-web-commerce-Jojgame-" class="project-title" target="_blank">JojGame — E-commerce</a>
+                        <p>Site e-commerce dédié aux jeux vidéo : panier, affichage produits dynamique, design responsive.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card perso" data-cat="perso">
+                    <div class="project-img-wrap">
+                        <a href="moviedb-detail.html"><img src="img/Movied.png" alt="Movie DB"></a>
+                        <span class="project-tag">Personnel</span>
+                    </div>
+                    <div class="project-info">
+                        <a href="https://github.com/Josue4231/Projet-API-Movie-DB" class="project-title" target="_blank">Movie DB — PHP</a>
+                        <p>Application full-stack <strong>PHP + Bootstrap</strong> connectée à l'API TMDb. Recherche par titre, genre, acteur.</p>
+                        <div class="project-tags"><span>PHP</span><span>Bootstrap</span><span>API</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="Contact">
+        <div class="container">
+            <div class="section-label">05 — Contact</div>
+            <h2 class="section-title">Travaillons ensemble</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>Je suis à la recherche d'une <strong>alternance Bac+3</strong> à partir de la prochaine rentrée. N'hésitez pas à me contacter pour discuter d'une collaboration.</p>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/josu%C3%A9-kialengela-tazi/" target="_blank" class="contact-link">LinkedIn →</a>
+                        <a href="https://github.com/Josue4231" target="_blank" class="contact-link">GitHub →</a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xgoneowl" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom et prénom *</label>
+                            <input type="text" name="name" id="name" placeholder="Votre nom" minlength="3" maxlength="80" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" name="email" id="email" placeholder="votre@email.com" maxlength="50" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea name="message" id="message" rows="5" placeholder="Votre message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-solid">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVIS -->
+    <section id="avis">
+        <div class="container">
+            <div class="section-label">06 — Avis</div>
+            <h2 class="section-title">Votre avis sur mon portfolio</h2>
+            <div class="review-wrap">
+                <form class="contact-form review-form" action="https://formspree.io/f/xgoneowl" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="review-firstname">Prénom *</label>
+                            <input type="text" id="review-firstname" name="prenom" placeholder="Votre prénom">
+                        </div>
+                        <div class="form-group">
+                            <label for="review-lastname">Nom *</label>
+                            <input type="text" id="review-lastname" name="nom" placeholder="Votre nom">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="status">Vous êtes :</label>
+                            <select id="status" name="statut">
+                                <option>Étudiant</option><option>Développeur</option>
+                                <option>Recruteur</option><option>Employé</option><option>Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="note">Note :</label>
+                            <select id="note" name="note">
+                                <option>⭐</option><option>⭐⭐</option><option>⭐⭐⭐</option>
+                                <option>⭐⭐⭐⭐</option><option>⭐⭐⭐⭐⭐</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Entreprise / École</label>
+                        <input type="text" id="company" name="entreprise" placeholder="Nom de votre structure">
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Votre avis</label>
+                        <textarea id="review-text" name="avis" rows="4" placeholder="Donnez votre avis sur mon portfolio..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-solid">Publier l'avis</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUSIQUE -->
+    <section id="musique">
+        <div class="container">
+            <div class="section-label">— Musique</div>
+            <h2 class="section-title">Ce que j'écoute</h2>
+            <div class="music-grid">
+                <div class="music-card">
+                    <img src="img/all in you.jpg" alt="All in You">
+                    <div class="music-info">
+                        <h3>All in You</h3>
+                        <span>Whois Taino</span>
+                        <a href="https://www.youtube.com/watch?v=RU76WwYkATw" target="_blank" class="btn btn-outline btn-sm">▶ Play</a>
+                    </div>
+                </div>
+                <div class="music-card">
+                    <img src="img/shiawase.jpg" alt="Shiawase">
+                    <div class="music-info">
+                        <h3>Shiawase</h3>
+                        <span>Dion Timmer</span>
+                        <a href="https://www.youtube.com/watch?v=N-V3zqvtbCM" target="_blank" class="btn btn-outline btn-sm">▶ Play</a>
+                    </div>
+                </div>
+                <div class="music-card">
+                    <img src="img/consume.jpg" alt="Consume">
+                    <div class="music-info">
+                        <h3>Consume</h3>
+                        <span>Bearky</span>
+                        <a href="https://www.youtube.com/watch?v=OQKN1Aqe69k" target="_blank" class="btn btn-outline btn-sm">▶ Play</a>
+                    </div>
+                </div>
+                <div class="music-card">
+                    <img src="img/blackclover.jpg" alt="Black Clover">
+                    <div class="music-info">
+                        <h3>Black Clover</h3>
+                        <span>Black Clover Op3</span>
+                        <a href="https://www.youtube.com/watch?v=dUiDZJMPh-s" target="_blank" class="btn btn-outline btn-sm">▶ Play</a>
+                    </div>
+                </div>
+                <div class="music-card">
+                    <img src="img/bad liar.jpg" alt="Bad Liar">
+                    <div class="music-info">
+                        <h3>Bad Liar</h3>
+                        <span>Imagine Dragons</span>
+                        <a href="https://www.youtube.com/watch?v=I-QfPUz1es8" target="_blank" class="btn btn-outline btn-sm">▶ Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-name">Josué Kialengela-Tazi</span>
+            <span class="footer-copy">© 2025 — Tous droits réservés</span>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/josu%C3%A9-kialengela-tazi/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Josue4231" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter projects
+        function filterProjects(cat, btn) {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (cat === 'all' || card.dataset.cat === cat) {
+                    card.style.display = 'flex';
+                    setTimeout(() => card.style.opacity = '1', 10);
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.display = 'none', 300);
+                }
+            });
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+        }
+
+        // Mobile menu toggle
+        document.getElementById('menuToggle')?.addEventListener('click', () => {
+            document.querySelector('.nav').classList.toggle('open');
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, .project-card, .skill-card, .timeline-item').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
-
-

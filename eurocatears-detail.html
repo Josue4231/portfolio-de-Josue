@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurocatears — Fiche Projet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a; --bg-2: #111111; --bg-3: #1a1a1a; --bg-4: #222222;
+    --border: #2a2a2a; --border-2: #3a3a3a;
+    --white: #f5f5f5; --grey-1: #c8c8c8; --grey-2: #8a8a8a; --grey-3: #555555;
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+    --container: 900px;
+    --accent: #6cbf8a;
+    --accent-dim: rgba(108, 191, 138, 0.08);
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--white); font-family: var(--font-body); font-size: 15px; line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 32px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: var(--font-display); font-size: 18px; }
+  .nav-back { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--grey-2); transition: color 0.2s; }
+  .nav-back:hover { color: var(--white); }
+  .nav-back svg { width: 14px; height: 14px; }
+
+  .hero { margin-top: 56px; padding: 80px 32px 60px; max-width: var(--container); margin-left: auto; margin-right: auto; border-bottom: 1px solid var(--border); }
+  .hero-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .tag { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; border: 1px solid var(--border-2); color: var(--grey-2); background: var(--bg-3); }
+  .tag.school { border-color: rgba(108,191,138,0.3); color: var(--accent); background: var(--accent-dim); }
+  .tag.done { border-color: rgba(100,200,120,0.3); color: #7dcea0; background: rgba(100,200,120,0.06); }
+
+  .hero h1 { font-family: var(--font-display); font-size: clamp(36px,6vw,60px); font-weight: 400; line-height: 1.05; margin-bottom: 12px; letter-spacing: -0.01em; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero-sub { font-size: 16px; color: var(--grey-2); max-width: 560px; margin-bottom: 36px; line-height: 1.6; }
+  .hero-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: 6px; border: 1px solid var(--border-2); background: var(--bg-3); color: var(--grey-1); cursor: pointer; transition: all 0.2s; }
+  .btn:hover { background: var(--bg-4); border-color: var(--grey-3); color: var(--white); }
+  .btn-primary { background: var(--accent); color: #0a0a0a; border-color: var(--accent); font-weight: 600; }
+  .btn-primary:hover { background: #88d4a2; border-color: #88d4a2; color: #0a0a0a; }
+
+  .main { max-width: var(--container); margin: 0 auto; padding: 0 32px 80px; }
+
+  .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin: 40px 0; }
+  .stat { padding: 20px 24px; border-right: 1px solid var(--border); }
+  .stat:last-child { border-right: none; }
+  .stat-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-3); margin-bottom: 6px; }
+  .stat-value { font-family: var(--font-display); font-size: 20px; color: var(--white); }
+
+  .section { margin-bottom: 48px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-num { font-size: 11px; color: var(--grey-3); font-weight: 500; letter-spacing: 0.05em; }
+  .section-title { font-family: var(--font-display); font-size: 22px; font-weight: 400; letter-spacing: -0.01em; }
+
+  .desc-block { background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 28px 32px; position: relative; overflow: hidden; }
+  .desc-block::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); }
+  .desc-block p { color: var(--grey-1); line-height: 1.75; font-size: 15px; }
+  .desc-block p + p { margin-top: 12px; }
+
+  .tech-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tech-badge { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 6px; font-size: 13px; color: var(--grey-1); font-weight: 500; transition: border-color 0.2s, color 0.2s; }
+  .tech-badge:hover { border-color: var(--border-2); color: var(--white); }
+  .tech-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .tech-dot.blue { background: #5b9bd5; }
+  .tech-dot.orange { background: #e07b54; }
+  .tech-dot.purple { background: #b39ddb; }
+
+  /* Schema BDD */
+  .schema-block { background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 24px 28px; font-family: 'Courier New', monospace; font-size: 12.5px; line-height: 1.9; }
+  .sql-kw { color: #5b9bd5; font-weight: 700; }
+  .sql-table { color: var(--accent); font-weight: 700; }
+  .sql-type { color: #e07b54; }
+  .sql-comment { color: var(--grey-3); font-style: italic; }
+  .sql-pk { color: #e8d5b0; }
+
+  .comp-table { width: 100%; border-collapse: collapse; }
+  .comp-table thead tr { background: var(--bg-3); }
+  .comp-table th { padding: 12px 16px; text-align: left; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-3); border-bottom: 1px solid var(--border); }
+  .comp-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--grey-1); font-size: 13.5px; line-height: 1.5; }
+  .comp-table tr:last-child td { border-bottom: none; }
+  .comp-table tbody tr { background: var(--bg-2); transition: background 0.15s; }
+  .comp-table tbody tr:hover { background: var(--bg-3); }
+  .comp-code { font-family: 'Courier New', monospace; font-size: 12px; font-weight: 700; color: var(--accent); background: var(--accent-dim); padding: 3px 7px; border-radius: 4px; border: 1px solid rgba(108,191,138,0.15); display: inline-block; }
+  .comp-name { color: var(--white); font-weight: 500; font-size: 13px; }
+
+  /* MCD/MLD étapes */
+  .phase-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .phase-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; }
+  .phase-num { font-size: 32px; font-family: var(--font-display); color: var(--border-2); line-height: 1; margin-bottom: 8px; }
+  .phase-title { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+  .phase-desc { font-size: 12.5px; color: var(--grey-2); line-height: 1.5; }
+
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .result-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; transition: border-color 0.2s; }
+  .result-card:hover { border-color: var(--border-2); }
+  .result-icon { font-size: 22px; margin-bottom: 10px; }
+  .result-title { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 5px; }
+  .result-desc { font-size: 13px; color: var(--grey-2); line-height: 1.5; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 32px; max-width: var(--container); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--grey-3); }
+
+  @media (max-width: 640px) {
+    .hero { padding: 60px 20px 40px; }
+    .main { padding: 0 20px 60px; }
+    .stats-bar { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(2) { border-right: none; }
+    .phase-grid, .result-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">JK</span>
+  <a href="https://josue4231.github.io/Portfolio-JK/" class="nav-back">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3L5 8l5 5"/></svg>
+    Retour au portfolio
+  </a>
+</nav>
+
+<div class="hero" style="margin-top:56px">
+  <div class="hero-meta">
+    <span class="tag school">Scolaire</span>
+    <span class="tag">Base de données</span>
+    <span class="tag done">✓ Terminé</span>
+  </div>
+  <h1>Projet <em>Eurocatears</em></h1>
+  <p class="hero-sub">Conception et implémentation d'une base de données relationnelle répertoriant les parcs d'attractions et montagnes russes d'Europe. UML, SQL, MariaDB.</p>
+  <div class="hero-links">
+    <a href="https://github.com/Josue4231/Projet-Eurocatears" target="_blank" class="btn btn-primary">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      Voir sur GitHub
+    </a>
+  </div>
+</div>
+
+<main class="main">
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-label">Contexte</div><div class="stat-value">Scolaire</div></div>
+    <div class="stat"><div class="stat-label">Période</div><div class="stat-value">2024–2025</div></div>
+    <div class="stat"><div class="stat-label">SGBD</div><div class="stat-value">MariaDB</div></div>
+    <div class="stat"><div class="stat-label">Modélisation</div><div class="stat-value">UML/MCD</div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">01</span><h2 class="section-title">Description du projet</h2></div>
+    <div class="desc-block">
+      <p>Eurocatears est un projet de <strong style="color:var(--white)">conception et d'implémentation d'une base de données relationnelle</strong> répertoriant les parcs d'attractions et les montagnes russes d'Europe. Il couvre l'ensemble du cycle de vie d'un projet BDD : de l'analyse du besoin à la mise en production.</p>
+      <p>Le projet part d'une analyse fonctionnelle du besoin, aboutit à un <strong style="color:var(--white)">Modèle Conceptuel de Données (MCD)</strong> modélisé en UML, puis un <strong style="color:var(--white)">Modèle Logique de Données (MLD)</strong> normalisé en 3NF. Le script SQL est ensuite exécuté sous <strong style="color:var(--white)">MariaDB</strong> administré via PhpMyAdmin.</p>
+      <p>Des requêtes SQL complexes ont été rédigées pour exploiter la base : jointures multi-tables, agrégats (COUNT, AVG, MAX), sous-requêtes et vues.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">02</span><h2 class="section-title">Technologies utilisées</h2></div>
+    <div class="tech-grid">
+      <div class="tech-badge"><span class="tech-dot"></span>SQL</div>
+      <div class="tech-badge"><span class="tech-dot"></span>MariaDB</div>
+      <div class="tech-badge"><span class="tech-dot blue"></span>PhpMyAdmin</div>
+      <div class="tech-badge"><span class="tech-dot purple"></span>UML (MCD / MLD)</div>
+      <div class="tech-badge"><span class="tech-dot orange"></span>Ubuntu</div>
+      <div class="tech-badge"><span class="tech-dot blue"></span>GitHub</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">03</span><h2 class="section-title">Étapes de conception</h2></div>
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="phase-num">01</div>
+        <div class="phase-title">Analyse du besoin</div>
+        <div class="phase-desc">Identification des entités métier (Parc, Attraction, Pays, Fabricant), des attributs et des règles de gestion.</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">02</div>
+        <div class="phase-title">MCD / MLD UML</div>
+        <div class="phase-desc">Modélisation conceptuelle (entités, relations, cardinalités), puis logique (tables, clés primaires/étrangères, normalisation 3NF).</div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num">03</div>
+        <div class="phase-title">Implémentation SQL</div>
+        <div class="phase-desc">Script de création des tables, contraintes d'intégrité (PK, FK, NOT NULL, UNIQUE), insertion des données et requêtes d'exploitation.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">04</span><h2 class="section-title">Extraits SQL</h2></div>
+    <div class="schema-block">
+      <div><span class="sql-comment">-- Création de la table principale</span></div>
+      <div><span class="sql-kw">CREATE TABLE</span> <span class="sql-table">parc_attraction</span> (</div>
+      <div style="padding-left:20px"><span class="sql-pk">id_parc</span>       <span class="sql-type">INT</span> <span class="sql-kw">PRIMARY KEY AUTO_INCREMENT</span>,</div>
+      <div style="padding-left:20px">nom_parc      <span class="sql-type">VARCHAR(100)</span> <span class="sql-kw">NOT NULL</span>,</div>
+      <div style="padding-left:20px">pays          <span class="sql-type">VARCHAR(50)</span>,</div>
+      <div style="padding-left:20px">nb_attractions <span class="sql-type">INT</span> <span class="sql-kw">DEFAULT</span> 0,</div>
+      <div style="padding-left:20px"><span class="sql-kw">CONSTRAINT</span> fk_pays <span class="sql-kw">FOREIGN KEY</span>(pays) <span class="sql-kw">REFERENCES</span> <span class="sql-table">pays</span>(code)</div>
+      <div>);</div>
+      <br>
+      <div><span class="sql-comment">-- Requête complexe : top 5 parcs par nb de montagnes russes</span></div>
+      <div><span class="sql-kw">SELECT</span> p.nom_parc, <span class="sql-kw">COUNT</span>(a.id_attraction) <span class="sql-kw">AS</span> nb_mr,</div>
+      <div style="padding-left:20px"><span class="sql-kw">AVG</span>(a.vitesse_max) <span class="sql-kw">AS</span> vitesse_moy</div>
+      <div><span class="sql-kw">FROM</span> <span class="sql-table">parc_attraction</span> p</div>
+      <div><span class="sql-kw">JOIN</span> <span class="sql-table">attraction</span> a <span class="sql-kw">ON</span> p.id_parc = a.id_parc</div>
+      <div><span class="sql-kw">WHERE</span> a.type = <span style="color:#6cbf8a">'montagne_russe'</span></div>
+      <div><span class="sql-kw">GROUP BY</span> p.nom_parc</div>
+      <div><span class="sql-kw">ORDER BY</span> nb_mr <span class="sql-kw">DESC LIMIT</span> 5;</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">05</span><h2 class="section-title">Compétences BTS SIO mobilisées</h2></div>
+    <table class="comp-table">
+      <thead><tr><th style="width:90px">Code</th><th style="width:200px">Compétence</th><th>Mise en œuvre</th></tr></thead>
+      <tbody>
+        <tr><td><span class="comp-code">B2.2</span></td><td><span class="comp-name">Concevoir une solution applicative</span></td><td>Modélisation MCD/MLD avec UML, définition des entités, relations et cardinalités selon les règles de gestion.</td></tr>
+        <tr><td><span class="comp-code">B2.3</span></td><td><span class="comp-name">Développer, documenter et déployer</span></td><td>Script SQL de création des tables, contraintes d'intégrité référentielle, insertion de données réelles.</td></tr>
+        <tr><td><span class="comp-code">B3.1</span></td><td><span class="comp-name">Exploiter les données à des fins décisionnelles</span></td><td>Requêtes complexes : jointures multi-tables, agrégats (COUNT, AVG), vues, sous-requêtes corrélées.</td></tr>
+        <tr><td><span class="comp-code">B3.2</span></td><td><span class="comp-name">Concevoir et mettre en œuvre une BDD</span></td><td>Administration MariaDB via PhpMyAdmin, normalisation 3NF, gestion des droits utilisateurs, optimisation des index.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-header"><span class="section-num">06</span><h2 class="section-title">Résultats & apprentissages</h2></div>
+    <div class="result-grid">
+      <div class="result-card"><div class="result-icon">📊</div><div class="result-title">Modélisation UML complète</div><div class="result-desc">MCD puis MLD complets avec entités, associations, cardinalités et normalisation 3NF avant implémentation.</div></div>
+      <div class="result-card"><div class="result-icon">🗄️</div><div class="result-title">Maîtrise de MariaDB</div><div class="result-desc">Création de BDD, gestion des contraintes d'intégrité, administration via PhpMyAdmin sous Ubuntu.</div></div>
+      <div class="result-card"><div class="result-icon">🔗</div><div class="result-title">Requêtes SQL avancées</div><div class="result-desc">Jointures multi-tables, agrégats, GROUP BY, HAVING, sous-requêtes et création de vues SQL.</div></div>
+      <div class="result-card"><div class="result-icon">🏗️</div><div class="result-title">Cycle complet d'un projet BDD</div><div class="result-desc">Expérience de bout en bout : analyse → modélisation → implémentation → exploitation des données.</div></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span>BTS SIO SLAM — Épreuve E5 — Josué Kialengela-Tazi</span>
+  <span>Fiche — Eurocatears</span>
+</footer>
+</body>
+</html>

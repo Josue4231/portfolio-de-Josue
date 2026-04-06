@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de Stage - Oueso Agency</title>
+
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --bg-2: #111111;
+            --bg-3: #1a1a1a;
+            --bg-4: #222222;
+            --border: #2a2a2a;
+            --border-2: #3a3a3a;
+
+            --white: #f5f5f5;
+            --grey-1: #c8c8c8;
+            --grey-2: #8a8a8a;
+            --grey-3: #555555;
+
+            --accent: #e8e8e8;
+            --accent-dim: #404040;
+
+            --font-display: 'DM Serif Display', Georgia, serif;
+            --font-body: 'DM Sans', sans-serif;
+
+            --radius: 12px;
+            --radius-lg: 20px;
+            --container: 1000px;
+            --gap: 2rem;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--white);
+            font-family: var(--font-body);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: auto;
+            padding: 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            margin-top: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title p {
+            color: var(--grey-2);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.3rem 0.6rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: var(--grey-2);
+            margin-right: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="title">
+        <h1>Rapport de Stage</h1>
+        <p>BTS SIO - Option SLAM</p>
+        <span class="tag">Développement Web</span>
+        <span class="tag">E-commerce</span>
+    </div>
+
+    <div class="card">
+        <h2>Présentation de l'entreprise</h2>
+        <p>J'ai effectué mon stage au sein de l'entreprise Oueso Agency, une agence spécialisée dans la création, la gestion et la maintenance de sites web. Elle accompagne des clients dans la mise en place de solutions e-commerce et de contenus numériques.</p>
+    </div>
+
+    <div class="card">
+        <h2>Contexte du stage</h2>
+        <p>Dans le cadre de mon BTS SIO option SLAM, ce stage avait pour objectif de me faire découvrir le fonctionnement réel d’un site e-commerce en production et de participer à sa maintenance quotidienne.</p>
+    </div>
+
+    <div class="card">
+        <h2>Objectifs du stage</h2>
+        <ul>
+            <li>Ajouter de nouveaux produits (affiches)</li>
+            <li>Modifier les prix et informations produits</li>
+            <li>Maintenir le site à jour</li>
+            <li>Supprimer et remplacer certains articles</li>
+            <li>Améliorer l'organisation des contenus</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Outils utilisés</h2>
+        <ul>
+            <li>PrestaShop (gestion e-commerce)</li>
+            <li>Byfunky (organisation des données)</li>
+            <li>Google Drive (ressources images)</li>
+            <li>Site web oueso.com (production)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Travail réalisé</h2>
+
+        <h3>1. Récupération des données</h3>
+        <p>J'ai récupéré les images des produits depuis un dossier Google Drive fourni par mon supérieur. Ces images étaient essentielles pour alimenter le catalogue du site.</p>
+
+        <h3>2. Organisation des produits</h3>
+        <p>J'ai ensuite structuré les informations sous forme de tableau sur Byfunky en ajoutant les éléments suivants : nom du produit, prix, URL et image associée.</p>
+
+        <h3>3. Intégration sur PrestaShop</h3>
+        <p>J'ai intégré les produits sur PrestaShop en ajoutant les descriptions, les images et en modifiant les prix selon les consignes données.</p>
+
+        <h3>4. Mise en ligne</h3>
+        <p>Après vérification, les produits ont été publiés sur le site officiel oueso.com.</p>
+
+        <h3>5. Maintenance du site</h3>
+        <p>J'ai également supprimé certains anciens articles et les ai remplacés par de nouveaux produits afin de garder le site à jour.</p>
+    </div>
+
+    <div class="card">
+        <h2>Difficultés rencontrées</h2>
+        <ul>
+            <li>Certains produits étaient déjà présents sur le site mais difficiles à retrouver à cause de l’absence de barre de recherche efficace.</li>
+            <li>J’ai dû parcourir manuellement plusieurs pages pour identifier les produits à modifier ou dupliquer.</li>
+            <li>Certains visuels étaient mal nommés ou peu clairs, ce qui compliquait leur identification.</li>
+            <li>La duplication de produits dans PrestaShop demandait beaucoup de rigueur pour éviter les erreurs.</li>
+            <li>Travailler sur un site déjà en ligne demandait une grande attention pour éviter de casser des éléments visibles par les utilisateurs.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Ce que j’ai appris</h2>
+        <ul>
+            <li>Comprendre le fonctionnement d’un site e-commerce en production</li>
+            <li>Utiliser PrestaShop pour gérer des produits</li>
+            <li>Organiser des données de manière structurée et efficace</li>
+            <li>Travailler avec des outils professionnels utilisés en entreprise</li>
+            <li>Gérer des modifications sur un site déjà en ligne sans perturber son fonctionnement</li>
+            <li>Développer ma rigueur et mon sens de l’organisation</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Bilan du stage</h2>
+        <p>Ce stage m’a permis de découvrir concrètement le métier de gestionnaire de contenu web dans un environnement e-commerce. J’ai pu développer des compétences techniques mais aussi organisationnelles. J’ai appris à être plus rigoureux, à mieux gérer les priorités et à travailler sur un site réel utilisé par des utilisateurs.</p>
+    </div>
+
+    <div class="card">
+        <h2>Conclusion</h2>
+        <p>Cette expérience au sein de Oueso Agency a été très enrichissante. Elle m’a permis de comprendre les enjeux de la maintenance d’un site web professionnel et de confirmer mon intérêt pour le développement web et la gestion de projets numériques.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

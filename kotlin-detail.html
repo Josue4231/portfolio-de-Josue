@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kotlin Monster — Fiche Projet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-2: #111111;
+    --bg-3: #1a1a1a;
+    --bg-4: #222222;
+    --border: #2a2a2a;
+    --border-2: #3a3a3a;
+    --white: #f5f5f5;
+    --grey-1: #c8c8c8;
+    --grey-2: #8a8a8a;
+    --grey-3: #555555;
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+    --container: 900px;
+    --accent: #b39ddb;
+    --accent-dim: rgba(179, 157, 219, 0.08);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo { font-family: var(--font-display); font-size: 18px; }
+
+  .nav-back {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13px; color: var(--grey-2); transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--white); }
+  .nav-back svg { width: 14px; height: 14px; }
+
+  .hero {
+    margin-top: 56px;
+    padding: 80px 32px 60px;
+    max-width: var(--container);
+    margin-left: auto; margin-right: auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+
+  .tag {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 4px 10px; border-radius: 3px;
+    border: 1px solid var(--border-2); color: var(--grey-2); background: var(--bg-3);
+  }
+  .tag.school { border-color: rgba(179,157,219,0.3); color: var(--accent); background: var(--accent-dim); }
+  .tag.done { border-color: rgba(100,200,120,0.3); color: #7dcea0; background: rgba(100,200,120,0.06); }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 60px);
+    font-weight: 400; line-height: 1.05;
+    margin-bottom: 12px; letter-spacing: -0.01em;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+
+  .hero-sub { font-size: 16px; color: var(--grey-2); max-width: 560px; margin-bottom: 36px; line-height: 1.6; }
+
+  .hero-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-size: 13px; font-weight: 500;
+    padding: 10px 20px; border-radius: 6px; border: 1px solid var(--border-2);
+    background: var(--bg-3); color: var(--grey-1); cursor: pointer; transition: all 0.2s;
+  }
+  .btn:hover { background: var(--bg-4); border-color: var(--grey-3); color: var(--white); }
+  .btn-primary { background: var(--accent); color: #0a0a0a; border-color: var(--accent); font-weight: 600; }
+  .btn-primary:hover { background: #c9b2f0; border-color: #c9b2f0; color: #0a0a0a; }
+
+  .main { max-width: var(--container); margin: 0 auto; padding: 0 32px 80px; }
+
+  .stats-bar {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin: 40px 0;
+  }
+  .stat { padding: 20px 24px; border-right: 1px solid var(--border); }
+  .stat:last-child { border-right: none; }
+  .stat-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-3); margin-bottom: 6px; }
+  .stat-value { font-family: var(--font-display); font-size: 20px; color: var(--white); }
+
+  .section { margin-bottom: 48px; }
+
+  .section-header {
+    display: flex; align-items: baseline; gap: 16px;
+    margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+  }
+  .section-num { font-size: 11px; color: var(--grey-3); font-weight: 500; letter-spacing: 0.05em; }
+  .section-title { font-family: var(--font-display); font-size: 22px; font-weight: 400; letter-spacing: -0.01em; }
+
+  .desc-block {
+    background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 28px 32px; position: relative; overflow: hidden;
+  }
+  .desc-block::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px; background: var(--accent);
+  }
+  .desc-block p { color: var(--grey-1); line-height: 1.75; font-size: 15px; }
+  .desc-block p + p { margin-top: 12px; }
+
+  .tech-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tech-badge {
+    display: flex; align-items: center; gap: 8px; padding: 8px 14px;
+    background: var(--bg-2); border: 1px solid var(--border); border-radius: 6px;
+    font-size: 13px; color: var(--grey-1); font-weight: 500; transition: border-color 0.2s, color 0.2s;
+  }
+  .tech-badge:hover { border-color: var(--border-2); color: var(--white); }
+  .tech-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .tech-dot.blue { background: #5b9bd5; }
+  .tech-dot.orange { background: #e07b54; }
+  .tech-dot.green { background: #6cbf8a; }
+
+  .comp-table { width: 100%; border-collapse: collapse; border-radius: 10px; overflow: hidden; }
+  .comp-table thead tr { background: var(--bg-3); }
+  .comp-table th {
+    padding: 12px 16px; text-align: left; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-3); border-bottom: 1px solid var(--border);
+  }
+  .comp-table td {
+    padding: 14px 16px; border-bottom: 1px solid var(--border);
+    vertical-align: top; color: var(--grey-1); font-size: 13.5px; line-height: 1.5;
+  }
+  .comp-table tr:last-child td { border-bottom: none; }
+  .comp-table tbody tr { background: var(--bg-2); transition: background 0.15s; }
+  .comp-table tbody tr:hover { background: var(--bg-3); }
+  .comp-code {
+    font-family: 'Courier New', monospace; font-size: 12px; font-weight: 700;
+    color: var(--accent); white-space: nowrap; background: var(--accent-dim);
+    padding: 3px 7px; border-radius: 4px; border: 1px solid rgba(179,157,219,0.15); display: inline-block;
+  }
+  .comp-name { color: var(--white); font-weight: 500; font-size: 13px; }
+
+  /* POO Concept Cards */
+  .poo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .poo-card {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    transition: border-color 0.2s;
+  }
+  .poo-card:hover { border-color: rgba(179,157,219,0.3); }
+
+  .poo-pill {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid rgba(179,157,219,0.2);
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .poo-title { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+  .poo-desc { font-size: 13px; color: var(--grey-2); line-height: 1.5; }
+
+  /* Architecture */
+  .arch-block {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--grey-2);
+  }
+
+  .arch-class { color: var(--accent); font-weight: 700; }
+  .arch-method { color: #7dcea0; }
+  .arch-prop { color: var(--grey-1); }
+  .arch-comment { color: var(--grey-3); font-style: italic; }
+  .arch-indent { padding-left: 20px; }
+
+  .timeline {
+    display: flex; flex-direction: column; gap: 0;
+    position: relative; padding-left: 28px;
+  }
+  .timeline::before {
+    content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px;
+    width: 1px; background: var(--border);
+  }
+  .timeline-item { position: relative; padding-bottom: 24px; }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-dot {
+    position: absolute; left: -24px; top: 6px;
+    width: 15px; height: 15px; border-radius: 50%;
+    background: var(--bg-4); border: 2px solid var(--border-2); transition: border-color 0.2s;
+  }
+  .timeline-item:hover .timeline-dot { border-color: var(--accent); }
+  .timeline-date { font-size: 11px; color: var(--grey-3); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 4px; font-weight: 500; }
+  .timeline-content { font-size: 14px; color: var(--grey-1); }
+
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .result-card {
+    background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px 22px; transition: border-color 0.2s;
+  }
+  .result-card:hover { border-color: var(--border-2); }
+  .result-icon { font-size: 22px; margin-bottom: 10px; }
+  .result-title { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 5px; }
+  .result-desc { font-size: 13px; color: var(--grey-2); line-height: 1.5; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 32px; max-width: var(--container); margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: var(--grey-3);
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 60px 20px 40px; }
+    .main { padding: 0 20px 60px; }
+    .stats-bar { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(2) { border-right: none; }
+    .poo-grid, .result-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">JK</span>
+  <a href="https://josue4231.github.io/Portfolio-JK/" class="nav-back">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3L5 8l5 5"/></svg>
+    Retour au portfolio
+  </a>
+</nav>
+
+<div class="hero" style="margin-top:56px">
+  <div class="hero-meta">
+    <span class="tag school">Scolaire</span>
+    <span class="tag">Mobile / POO</span>
+    <span class="tag done">✓ Terminé</span>
+  </div>
+  <h1>Kotlin <em>Monster</em></h1>
+  <p class="hero-sub">Jeu d'aventure inspiré de Pokémon développé en Kotlin, mettant en œuvre les principes fondamentaux de la Programmation Orientée Objet : héritage, polymorphisme, encapsulation et abstraction.</p>
+  <div class="hero-links">
+    <a href="https://github.com/Josue4231/kotlin-Monsters" target="_blank" class="btn btn-primary">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      Voir sur GitHub
+    </a>
+  </div>
+</div>
+
+<main class="main">
+
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-label">Contexte</div><div class="stat-value">Scolaire</div></div>
+    <div class="stat"><div class="stat-label">Période</div><div class="stat-value">2025</div></div>
+    <div class="stat"><div class="stat-label">Langage</div><div class="stat-value">Kotlin</div></div>
+    <div class="stat"><div class="stat-label">Paradigme</div><div class="stat-value">POO</div></div>
+  </div>
+
+  <!-- 01 — Description -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Description du projet</h2>
+    </div>
+    <div class="desc-block">
+      <p>Kotlin Monster est un jeu d'aventure en ligne de commande développé en <strong style="color:var(--white)">Kotlin</strong> dans le cadre du cours de programmation orientée objet. Inspiré de l'univers Pokémon, le joueur explore différentes zones de jeu, rencontre des monstres, peut les capturer et les faire évoluer, puis les engager dans des combats stratégiques.</p>
+      <p>L'objectif pédagogique principal est la mise en pratique des concepts fondamentaux de la <strong style="color:var(--white)">POO</strong> : chaque entité du jeu est modélisée par une classe (Monstre, Joueur, Zone, Combat). Le projet applique l'héritage pour créer différents types de monstres, le polymorphisme pour les attaques spéciales, et l'encapsulation pour protéger les attributs internes.</p>
+      <p>Développé avec <strong style="color:var(--white)">IntelliJ IDEA</strong>, le projet est organisé en packages thématiques et documenté avec KDoc.</p>
+    </div>
+  </div>
+
+  <!-- 02 — Technologies -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Technologies utilisées</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-badge"><span class="tech-dot"></span>Kotlin</div>
+      <div class="tech-badge"><span class="tech-dot blue"></span>IntelliJ IDEA</div>
+      <div class="tech-badge"><span class="tech-dot orange"></span>JVM</div>
+      <div class="tech-badge"><span class="tech-dot green"></span>KDoc (documentation)</div>
+      <div class="tech-badge"><span class="tech-dot blue"></span>GitHub</div>
+      <div class="tech-badge"><span class="tech-dot"></span>Diagramme UML (classes)</div>
+    </div>
+  </div>
+
+  <!-- 03 — Concepts POO -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Concepts POO appliqués</h2>
+    </div>
+    <div class="poo-grid">
+      <div class="poo-card">
+        <div class="poo-pill">Héritage</div>
+        <div class="poo-title">Classes mère / filles</div>
+        <div class="poo-desc">La classe abstraite <code style="color:var(--accent)">Monstre</code> est étendue par des types spécifiques (<code style="color:var(--accent)">MonstreFeu</code>, <code style="color:var(--accent)">MonstреEau</code>…) qui héritent des attributs communs (pv, niveau, nom) et surchargent les méthodes d'attaque.</div>
+      </div>
+      <div class="poo-card">
+        <div class="poo-pill">Polymorphisme</div>
+        <div class="poo-title">Comportements différenciés</div>
+        <div class="poo-desc">La méthode <code style="color:var(--accent)">attaquer()</code> est redéfinie dans chaque sous-classe. L'appel sur un objet de type parent invoque la version correcte selon le type réel de l'instance à l'exécution.</div>
+      </div>
+      <div class="poo-card">
+        <div class="poo-pill">Encapsulation</div>
+        <div class="poo-title">Protection des données</div>
+        <div class="poo-desc">Les attributs sensibles (pv, niveau, statut) sont déclarés <code style="color:var(--accent)">private</code>. L'accès est contrôlé via des getters/setters avec validation, empêchant des valeurs incohérentes (PV négatifs, niveau hors limites).</div>
+      </div>
+      <div class="poo-card">
+        <div class="poo-pill">Abstraction</div>
+        <div class="poo-title">Interfaces & classes abstraites</div>
+        <div class="poo-desc">Interface <code style="color:var(--accent)">Combattant</code> définissant le contrat commun à tout participant d'un combat. La classe abstraite <code style="color:var(--accent)">Monstre</code> implémente la logique commune et délègue les comportements spécifiques.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 — Architecture -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Architecture des classes</h2>
+    </div>
+    <div class="arch-block">
+      <div><span class="arch-comment">// Interface principale</span></div>
+      <div><span class="arch-class">interface</span> <span class="arch-prop">Combattant</span> {</div>
+      <div class="arch-indent"><span class="arch-method">fun</span> attaquer(cible: Combattant): Int</div>
+      <div class="arch-indent"><span class="arch-method">fun</span> recevoirDegats(degats: Int)</div>
+      <div>}</div>
+      <br>
+      <div><span class="arch-class">abstract class</span> <span class="arch-prop">Monstre</span>(<span class="arch-prop">val</span> nom: String, <span class="arch-prop">var</span> pv: Int) : Combattant {</div>
+      <div class="arch-indent"><span class="arch-prop">var</span> niveau: Int = 1</div>
+      <div class="arch-indent"><span class="arch-prop">var</span> estCapture: Boolean = false</div>
+      <div class="arch-indent"><span class="arch-method">abstract fun</span> attaqueSpeciale(): Int</div>
+      <div class="arch-indent"><span class="arch-method">fun</span> evoluer() { niveau++ }</div>
+      <div>}</div>
+      <br>
+      <div><span class="arch-class">class</span> <span class="arch-prop">MonstreFeu</span>(nom: String, pv: Int) : <span class="arch-prop">Monstre</span>(nom, pv) {</div>
+      <div class="arch-indent"><span class="arch-method">override fun</span> attaqueSpeciale() = <span class="arch-method">lancerFlammes</span>()</div>
+      <div>}</div>
+      <br>
+      <div><span class="arch-class">class</span> <span class="arch-prop">Joueur</span>(val pseudo: String) {</div>
+      <div class="arch-indent"><span class="arch-prop">val</span> equipe: MutableList&lt;Monstre&gt; = mutableListOf()</div>
+      <div class="arch-indent"><span class="arch-method">fun</span> capturer(m: Monstre) { m.estCapture = true; equipe.add(m) }</div>
+      <div>}</div>
+    </div>
+  </div>
+
+  <!-- 05 — Compétences -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Compétences BTS SIO mobilisées</h2>
+    </div>
+    <table class="comp-table">
+      <thead>
+        <tr>
+          <th style="width:90px">Code</th>
+          <th style="width:200px">Compétence</th>
+          <th>Mise en œuvre dans le projet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="comp-code">B2.1</span></td>
+          <td><span class="comp-name">Exploiter les ressources du poste de travail</span></td>
+          <td>Utilisation d'IntelliJ IDEA, configuration du projet Kotlin, gestion des dépendances JVM.</td>
+        </tr>
+        <tr>
+          <td><span class="comp-code">B2.2</span></td>
+          <td><span class="comp-name">Concevoir une solution applicative</span></td>
+          <td>Diagramme de classes UML modélisant Monstre, Joueur, Zone et Combat avec leurs relations d'héritage.</td>
+        </tr>
+        <tr>
+          <td><span class="comp-code">B2.3</span></td>
+          <td><span class="comp-name">Développer, documenter et déployer</span></td>
+          <td>Développement en Kotlin avec héritage, polymorphisme, encapsulation, interfaces et classes abstraites. Documentation KDoc.</td>
+        </tr>
+        <tr>
+          <td><span class="comp-code">B2.4</span></td>
+          <td><span class="comp-name">Travailler en mode projet</span></td>
+          <td>Organisation du code en packages (models, game, utils), versionnage GitHub avec commits descriptifs.</td>
+        </tr>
+        <tr>
+          <td><span class="comp-code">B3.2</span></td>
+          <td><span class="comp-name">Gérer le patrimoine informatique</span></td>
+          <td>Documentation du code, structure claire du projet, versionnage permettant la traçabilité des modifications.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 06 — Résultats -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2 class="section-title">Résultats & apprentissages</h2>
+    </div>
+    <div class="result-grid">
+      <div class="result-card">
+        <div class="result-icon">🏗️</div>
+        <div class="result-title">Architecture POO solide</div>
+        <div class="result-desc">Conception d'une hiérarchie de classes cohérente avec héritage, interfaces et classes abstraites en Kotlin.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🔒</div>
+        <div class="result-title">Encapsulation maîtrisée</div>
+        <div class="result-desc">Protection des données internes via modificateurs private/protected, accès contrôlé via propriétés Kotlin.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🧩</div>
+        <div class="result-title">Polymorphisme appliqué</div>
+        <div class="result-desc">Redéfinition des méthodes dans les sous-classes, appel polymorphe via le type de la classe mère.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">📐</div>
+        <div class="result-title">Modélisation UML</div>
+        <div class="result-desc">Réalisation d'un diagramme de classes UML complet avant l'implémentation pour valider l'architecture.</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <span>BTS SIO SLAM — Épreuve E5 — Josué Kialengela-Tazi</span>
+  <span>Fiche — Kotlin Monster</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JojGame E-commerce — Fiche Projet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a; --bg-2: #111111; --bg-3: #1a1a1a; --bg-4: #222222;
+    --border: #2a2a2a; --border-2: #3a3a3a;
+    --white: #f5f5f5; --grey-1: #c8c8c8; --grey-2: #8a8a8a; --grey-3: #555555;
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+    --container: 900px;
+    --accent: #d4a843;
+    --accent-dim: rgba(212, 168, 67, 0.08);
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--white); font-family: var(--font-body); font-size: 15px; line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,10,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 32px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: var(--font-display); font-size: 18px; }
+  .nav-back { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--grey-2); transition: color 0.2s; }
+  .nav-back:hover { color: var(--white); }
+  .nav-back svg { width: 14px; height: 14px; }
+
+  .hero { margin-top: 56px; padding: 80px 32px 60px; max-width: var(--container); margin-left: auto; margin-right: auto; border-bottom: 1px solid var(--border); }
+  .hero-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+  .tag { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; border: 1px solid var(--border-2); color: var(--grey-2); background: var(--bg-3); }
+  .tag.school { border-color: rgba(212,168,67,0.3); color: var(--accent); background: var(--accent-dim); }
+  .tag.done { border-color: rgba(100,200,120,0.3); color: #7dcea0; background: rgba(100,200,120,0.06); }
+
+  .hero h1 { font-family: var(--font-display); font-size: clamp(36px,6vw,60px); font-weight: 400; line-height: 1.05; margin-bottom: 12px; letter-spacing: -0.01em; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero-sub { font-size: 16px; color: var(--grey-2); max-width: 560px; margin-bottom: 36px; line-height: 1.6; }
+  .hero-links { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: 6px; border: 1px solid var(--border-2); background: var(--bg-3); color: var(--grey-1); cursor: pointer; transition: all 0.2s; }
+  .btn:hover { background: var(--bg-4); border-color: var(--grey-3); color: var(--white); }
+  .btn-primary { background: var(--accent); color: #0a0a0a; border-color: var(--accent); font-weight: 600; }
+  .btn-primary:hover { background: #e8be5a; border-color: #e8be5a; color: #0a0a0a; }
+
+  .main { max-width: var(--container); margin: 0 auto; padding: 0 32px 80px; }
+
+  .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin: 40px 0; }
+  .stat { padding: 20px 24px; border-right: 1px solid var(--border); }
+  .stat:last-child { border-right: none; }
+  .stat-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-3); margin-bottom: 6px; }
+  .stat-value { font-family: var(--font-display); font-size: 20px; color: var(--white); }
+
+  .section { margin-bottom: 48px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+  .section-num { font-size: 11px; color: var(--grey-3); font-weight: 500; letter-spacing: 0.05em; }
+  .section-title { font-family: var(--font-display); font-size: 22px; font-weight: 400; letter-spacing: -0.01em; }
+
+  .desc-block { background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 28px 32px; position: relative; overflow: hidden; }
+  .desc-block::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); }
+  .desc-block p { color: var(--grey-1); line-height: 1.75; font-size: 15px; }
+  .desc-block p + p { margin-top: 12px; }
+
+  .tech-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tech-badge { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 6px; font-size: 13px; color: var(--grey-1); font-weight: 500; transition: border-color 0.2s; }
+  .tech-badge:hover { border-color: var(--border-2); color: var(--white); }
+  .tech-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; background: var(--accent); }
+  .tech-dot.red  { background: #e07b54; }
+  .tech-dot.blue { background: #5b9bd5; }
+  .tech-dot.green{ background: #6cbf8a; }
+
+  /* Fonctionnalités e-commerce */
+  .feat-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .feat-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 20px; transition: border-color 0.2s; }
+  .feat-card:hover { border-color: rgba(212,168,67,0.25); }
+  .feat-icon { font-size: 24px; margin-bottom: 10px; }
+  .feat-title { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 5px; }
+  .feat-desc { font-size: 12.5px; color: var(--grey-2); line-height: 1.5; }
+
+  /* Code JS panier */
+  .code-block { background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 24px 28px; font-family: 'Courier New', monospace; font-size: 12.5px; line-height: 1.9; overflow-x: auto; }
+  .js-kw  { color: #5b9bd5; font-weight: 700; }
+  .js-fn  { color: var(--accent); }
+  .js-str { color: #6cbf8a; }
+  .js-cmt { color: var(--grey-3); font-style: italic; }
+  .js-var { color: #c8c8c8; }
+  .js-num { color: #b39ddb; }
+
+  /* Pages du site */
+  .pages-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .page-item { display: flex; align-items: center; gap: 14px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; }
+  .page-num { font-family: var(--font-display); font-size: 22px; color: var(--border-2); flex-shrink: 0; width: 28px; }
+  .page-name { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+  .page-desc { font-size: 12px; color: var(--grey-2); }
+
+  .comp-table { width: 100%; border-collapse: collapse; }
+  .comp-table thead tr { background: var(--bg-3); }
+  .comp-table th { padding: 12px 16px; text-align: left; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grey-3); border-bottom: 1px solid var(--border); }
+  .comp-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--grey-1); font-size: 13.5px; line-height: 1.5; }
+  .comp-table tr:last-child td { border-bottom: none; }
+  .comp-table tbody tr { background: var(--bg-2); transition: background 0.15s; }
+  .comp-table tbody tr:hover { background: var(--bg-3); }
+  .comp-code { font-family: 'Courier New', monospace; font-size: 12px; font-weight: 700; color: var(--accent); background: var(--accent-dim); padding: 3px 7px; border-radius: 4px; border: 1px solid rgba(212,168,67,0.15); display: inline-block; }
+  .comp-name { color: var(--white); font-weight: 500; font-size: 13px; }
+
+  .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .result-card { background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 20px 22px; transition: border-color 0.2s; }
+  .result-card:hover { border-color: var(--border-2); }
+  .result-icon { font-size: 22px; margin-bottom: 10px; }
+  .result-title { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 5px; }
+  .result-desc { font-size: 13px; color: var(--grey-2); line-height: 1.5; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 32px; max-width: var(--container); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--grey-3); }
+
+  @media (max-width: 640px) {
+    .hero { padding: 60px 20px 40px; }
+    .main { padding: 0 20px 60px; }
+    .stats-bar { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(2) { border-right: none; }
+    .feat-grid { grid-template-columns: 1fr; }
+    .pages-list, .result-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">JK</span>
+  <a href="https://josue4231.github.io/Portfolio-JK/" class="nav-back">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3L5 8l5 5"/></svg>
+    Retour au portfolio
+  </a>
+</nav>
+
+<div class="hero" style="margin-top:56px">
+  <div class="hero-meta">
+    <span class="tag school">Scolaire</span>
+    <span class="tag">E-commerce</span>
+    <span class="tag done">✓ Terminé</span>
+  </div>
+  <h1>JojGame — <em>E-commerce</em></h1>
+  <p class="hero-sub">Site e-commerce dédié aux jeux vidéo : catalogue de produits dynamique, système de panier fonctionnel en JavaScript et design responsive sans framework.</p>
+  <div class="hero-links">
+    <a href="https://github.com/Josue4231/projet-web-commerce-Jojgame-" target="_blank" class="btn btn-primary">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      Voir sur GitHub
+    </a>
+  </div>
+</div>
+
+<main class="main">
+
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-label">Contexte</div><div class="stat-value">Scolaire</div></div>
+    <div class="stat"><div class="stat-label">Période</div><div class="stat-value">2024–2025</div></div>
+    <div class="stat"><div class="stat-label">Type</div><div class="stat-value">E-commerce</div></div>
+    <div class="stat"><div class="stat-label">Stack</div><div class="stat-value">JS Vanilla</div></div>
+  </div>
+
+  <!-- 01 Description -->
+  <div class="section">
+    <div class="section-header"><span class="section-num">01</span><h2 class="section-title">Description du projet</h2></div>
+    <div class="desc-block">
+      <p>JojGame est un site e-commerce dédié à la vente de jeux vidéo, développé en <strong style="color:var(--white)">HTML5, CSS3 et JavaScript Vanilla</strong> sans framework. Le projet simule une boutique en ligne complète avec un catalogue de produits, un système de panier interactif et une interface responsive adaptée à tous les appareils.</p>
+      <p>Les produits sont affichés dynamiquement depuis un objet JavaScript simulant une source de données. Le panier est entièrement géré côté client : ajout et suppression d'articles, modification des quantités, calcul automatique du total et persistance via <strong style="color:var(--white)">localStorage</strong> pour conserver le panier entre les sessions.</p>
+      <p>Ce projet illustre la capacité à construire une expérience utilisateur complète et fonctionnelle en JavaScript pur, sans dépendance externe — une compétence fondamentale avant d'aborder les frameworks.</p>
+    </div>
+  </div>
+
+  <!-- 02 Tech -->
+  <div class="section">
+    <div class="section-header"><span class="section-num">02</span><h2 class="section-title">Technologies utilisées</h2></div>
+    <div class="tech-grid">
+      <div class="tech-badge"><span class="tech-dot red"></span>HTML5</div>
+      <div class="tech-badge"><span class="tech-dot blue"></span>CSS3</div>
+      <div class="tech-badge"><span class="tech-dot"></span>JavaScript ES6+</div>
+      <div class="tech-badge"><span class="tech-dot green"></span>LocalStorage</div>
+      <div class="tech-badge"><span class="tech-dot"></span>DOM Manipulation</div>
+      <div class="tech-badge"><span class="tech-dot blue"></span>Responsive Design</div>
+      <div class="tech-badge"><span class="tech-dot"></span>GitHub</div>
+    </div>
+  </div>
+
+  <!-- 03 Fonctionnalités -->
+  <div class="section">
+    <div class="section-header"><span class="section-num">03</span><h2 class="section-title">Fonctionnalités e-commerce</h2></div>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">🎮</div>
+        <div class="feat-title">Catalogue dynamique</div>
+        <div class="feat-desc">Affichage des jeux via génération dynamique du DOM depuis un tableau d'objets JS (titre, prix, image, genre).</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🛒</div>
+        <div class="feat-title">Panier interactif</div>
+        <div class="feat-desc">Ajout/suppression d'articles, modification des quantités, calcul du total en temps réel sans rechargement.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">💾</div>
+        <div class="feat-title">Persistance LocalStorage</div>
+        <div class="feat-desc">Le panier est sauvegardé en localStorage — il est restauré automatiquement à chaque ouverture du site.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🔍</div>
+        <div class="feat-title">Filtrage par genre</div>
+        <div class="feat-desc">Filtrage du catalogue par genre (FPS, RPG, Sport…) avec mise à jour instantanée de l'affichage.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📱</div>
+        <div class="feat-title">Design responsive</div>
+        <div class="feat-desc">Interface adaptée mobile/tablette/desktop via CSS Grid, Flexbox et media queries sans framework CSS.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🎨</div>
+        <div class="feat-title">UI soignée</div>
+        <div class="feat-desc">Thème gaming cohérent, effets hover sur les cartes produits, transitions CSS et badges promotionnels.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 Code panier -->
+  <div class="section">
+    <div class="section-header"><span class="section-num">04</span><h2 class="section-title">Extrait de code — Gestion du panier</h2></div>
+    <div class="code-block">
+<span class="js-cmt">// cart.js — Logique panier avec persistance LocalStorage</span>
+
+<span class="js-kw">let</span> <span class="js-var">cart</span> = JSON.parse(localStorage.getItem(<span class="js-str">'jojgame_cart'</span>)) || [];
+
+<span class="js-kw">function</span> <span class="js-fn">addToCart</span>(productId) {
+  <span class="js-kw">const</span> <span class="js-var">product</span> = products.find(p => p.id === productId);
+  <span class="js-kw">const</span> <span class="js-var">existing</span> = cart.find(item => item.id === productId);
+
+  <span class="js-kw">if</span> (existing) {
+    existing.quantity += <span class="js-num">1</span>;           <span class="js-cmt">// Incrémente si déjà dans le panier</span>
+  } <span class="js-kw">else</span> {
+    cart.push({ ...product, quantity: <span class="js-num">1</span> }); <span class="js-cmt">// Sinon ajoute</span>
+  }
+
+  <span class="js-fn">saveCart</span>();
+  <span class="js-fn">renderCart</span>();
+}
+
+<span class="js-kw">function</span> <span class="js-fn">saveCart</span>() {
+  localStorage.setItem(<span class="js-str">'jojgame_cart'</span>, JSON.stringify(cart));
+}
+
+<span class="js-kw">function</span> <span class="js-fn">getTotal</span>() {
+  <span class="js-kw">return</span> cart.reduce((sum, item) => sum + item.price * item.quantity, <span class="js-num">0</span>).toFixed(<span class="js-num">2</span>);
+}
+
+<span class="js-kw">function</span> <span class="js-fn">renderCart</span>() {
+  <span class="js-kw">const</span> <span class="js-var">cartContainer</span> = document.getElementById(<span class="js-str">'cart-items'</span>);
+  cartContainer.innerHTML = cart.map(item => `
+    &lt;div class="cart-item"&gt;
+      &lt;span&gt;${item.name} × ${item.quantity}&lt;/span&gt;
+      &lt;span&gt;${(item.price * item.quantity).toFixed(<span class="js-num">2</span>)} €&lt;/span&gt;
+    &lt;/div&gt;
+  `).join(<span class="js-str">''</span>);
+  document.getElementById(<span class="js-str">'cart-total'</span>).textContent = <span class="js-fn">getTotal</span>() + <span class="js-str">' €'</span>;
+}
+    </div>
+  </div>
+
+  <!-- 05 Pages -->
+  <div class="section">
+    <div class="section-header"><span class="section-num">05</span><h2 class="section-title">Structure du site</h2></div>
+    <div class="pages-list">
+      <div class="page-item"><div class="page-num">01</div><div><div class="page-name">index.html — Accueil</div><div class="page-desc">Hero banner, jeux mis en avant, accès au catalogue</div></div></div>
+      <div class="page-item"><div class="page-num">02</div><div><div class="page-name">catalogue.html — Produits</div><div class="page-desc">Catalogue complet avec filtres par genre et barre de recherche</div></div></div>
+      <div class="page-item"><div class="page-num">03</div><div><div class="page-name">panier.html — Panier</div><div class="page-desc">Récapitulatif des articles, quantités, total et validation commande</div></div></div>
+      <div class="page-item"><div class="page-num">04</div><div><div class="page-name">contact.html — Contact</div><div class="page-desc">Formulaire de contact avec validation HTML5 des champs</div></div></div>
+    </div>
+  </div>
+
+  <!-- 06 Compétences -->
+  <div class="section">
+    <div class="section-header"><span class="section-num">06</span><h2 class="section-title">Compétences BTS SIO mobilisées</h2></div>
+    <table class="comp-table">
+      <thead><tr><th style="width:90px">Code</th><th style="width:200px">Compétence</th><th>Mise en œuvre dans le projet</th></tr></thead>
+      <tbody>
+        <tr><td><span class="comp-code">B2.2</span></td><td><span class="comp-name">Concevoir une solution applicative</span></td><td>Maquettage de l'interface e-commerce, modélisation des données produits, conception du flux utilisateur (catalogue → panier → validation).</td></tr>
+        <tr><td><span class="comp-code">B2.3</span></td><td><span class="comp-name">Développer, documenter et déployer</span></td><td>Développement HTML/CSS/JS, génération dynamique du catalogue, gestion du panier avec LocalStorage, filtrage des produits.</td></tr>
+        <tr><td><span class="comp-code">B1.3</span></td><td><span class="comp-name">Développer la présence en ligne</span></td><td>Design responsive optimisé, UX soignée, navigation intuitive, balisage HTML sémantique pour le référencement.</td></tr>
+        <tr><td><span class="comp-code">B2.4</span></td><td><span class="comp-name">Travailler en mode projet</span></td><td>Versionnage avec Git/GitHub, organisation des fichiers par type (js/, css/, img/), documentation du projet.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 07 Résultats -->
+  <div class="section">
+    <div class="section-header"><span class="section-num">07</span><h2 class="section-title">Résultats & apprentissages</h2></div>
+    <div class="result-grid">
+      <div class="result-card"><div class="result-icon">🛒</div><div class="result-title">Panier JS complet</div><div class="result-desc">Gestion complète d'un panier e-commerce : CRUD articles, calcul total, persistance LocalStorage entre sessions.</div></div>
+      <div class="result-card"><div class="result-icon">⚡</div><div class="result-title">DOM dynamique</div><div class="result-desc">Génération et manipulation du DOM sans framework — compétence de base pour comprendre les frameworks modernes.</div></div>
+      <div class="result-card"><div class="result-icon">📐</div><div class="result-title">CSS Grid & Flexbox</div><div class="result-desc">Mise en page responsive complexe (grille produits, header sticky, sidebar panier) sans Bootstrap.</div></div>
+      <div class="result-card"><div class="result-icon">🎯</div><div class="result-title">UX e-commerce</div><div class="result-desc">Compréhension du parcours utilisateur e-commerce, feedback visuels (badges, animations panier, confirmation).</div></div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <span>BTS SIO SLAM — Épreuve E5 — Josué Kialengela-Tazi</span>
+  <span>Fiche — JojGame E-commerce</span>
+</footer>
+
+</body>
+</html>
